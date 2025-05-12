@@ -2,24 +2,24 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
-  color: #222;
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 header, footer {
-  background-color: #102840;
-  color: #fff;
+  background-color: #0d1b2a;
+  color: #ffffff;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 0.5rem 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 nav li {
@@ -27,9 +27,13 @@ nav li {
 }
 
 nav a {
-  color: #ffffff;
+  color: #66b2ff;
   text-decoration: none;
   font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 section {
@@ -39,22 +43,22 @@ section {
 }
 
 h2 {
-  color: #005eff;
-  border-bottom: 2px solid #005eff;
+  color: #66b2ff;
+  border-bottom: 2px solid #1a73e8;
   padding-bottom: 0.3rem;
 }
 
 h3 {
-  color: #0040aa;
+  color: #88c5ff;
 }
 
 #tableaux .theme {
   margin-bottom: 3rem;
   padding: 1.5rem;
-  background-color: #ffffff;
-  border-left: 5px solid #005eff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  background-color: #1e1e1e;
+  border-left: 4px solid #1a73e8;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 #tableaux .theme h3 {
@@ -71,13 +75,16 @@ h3 {
 .galerie img {
   width: 100%;
   height: auto;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  border-radius: 10px;
+  border: 2px solid #2a2a2a;
+  background: #000;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .galerie img:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
+  box-shadow: 0 0 15px #1a73e8;
 }
 
 form {
@@ -90,13 +97,15 @@ form {
 
 input, textarea {
   padding: 0.8rem;
-  border: 1px solid #ccc;
+  background-color: #1f1f1f;
+  color: #fff;
+  border: 1px solid #444;
   border-radius: 6px;
   font-size: 1rem;
 }
 
 button {
-  background-color: #005eff;
+  background-color: #1a73e8;
   color: white;
   padding: 0.8rem;
   border: none;
@@ -107,7 +116,7 @@ button {
 }
 
 button:hover {
-  background-color: #0040aa;
+  background-color: #1665c1;
 }
 
 footer p {
