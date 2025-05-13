@@ -164,5 +164,5 @@ footer p {
 section {
   padding: 2rem;
   max-width: 1200px;
-  margin: 4rem auto; /* Ajoute de l'espace avant et après */
+  margin: 2rem auto; /* Ajoute de l'espace avant et après */
 }
