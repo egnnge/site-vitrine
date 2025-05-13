@@ -154,7 +154,7 @@ footer p {
   box-shadow: 0 0 15px #00bfff;
 }
 .logo-retour-haut {
-  max-height: 80px !important;
+  max-height: 150px !important;
   height: auto !important;
   width: auto !important;
   transition: transform 0.3s, box-shadow 0.3s;
