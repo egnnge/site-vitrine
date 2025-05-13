@@ -125,7 +125,7 @@ footer p {
 }
 
 .logo-brillant {
-  max-height: 190px !important;
+  max-height: 170px !important;
   height: auto !important;
   width: auto !important;
   display: block;
@@ -144,7 +144,7 @@ footer p {
 }
 
 .logo-retour-haut {
-  max-height: 80px;
+  max-height: 130px;
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
 }
@@ -154,7 +154,7 @@ footer p {
   box-shadow: 0 0 15px #00bfff;
 }
 .logo-retour-haut {
-  max-height: 150px !important;
+  max-height: 130px !important;
   height: auto !important;
   width: auto !important;
   transition: transform 0.3s, box-shadow 0.3s;
