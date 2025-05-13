@@ -165,4 +165,13 @@ h3 {
   color: #88c5ff;
   margin-top: 2.5rem; /* espace avant chaque sous-titre */
 }
+section {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 4rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
 
