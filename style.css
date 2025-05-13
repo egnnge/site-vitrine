@@ -182,4 +182,8 @@ section {
   cursor: pointer;
   display: inline-block;
 }
+.retour-logo {
+  text-align: center;
+  margin-top: 3rem;
+}
 
