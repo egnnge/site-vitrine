@@ -123,8 +123,11 @@ footer p {
   margin: 0.3rem 0;
   font-size: 0.9rem;
 }
+
 .logo-brillant {
-  max-height: 160px;
+  max-height: 100px;
+  height: auto;
+  width: auto;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -132,4 +135,3 @@ footer p {
   box-shadow: 0 0 20px #00bfff, 0 0 40px #00bfff;
   transform: scale(1.05);
 }
-
