@@ -153,4 +153,11 @@ footer p {
   transform: scale(1.1);
   box-shadow: 0 0 15px #00bfff;
 }
-
+.logo-retour-haut {
+  max-height: 80px !important;
+  height: auto !important;
+  width: auto !important;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  display: inline-block;
+}
