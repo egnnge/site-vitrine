@@ -137,3 +137,20 @@ footer p {
   box-shadow: 0 0 20px #00bfff, 0 0 40px #00bfff;
   transform: scale(1.05);
 }
+
+.retour-haut {
+  text-align: center;
+  margin: 3rem 0 2rem;
+}
+
+.logo-retour-haut {
+  max-height: 80px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.logo-retour-haut:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00bfff;
+}
+
