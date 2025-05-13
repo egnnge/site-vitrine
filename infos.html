@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prestations et Contact - Artisan Domotique 21</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .nav-buttons {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+
+    .nav-buttons a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 12px 20px;
+      background-color: #005eff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 0 8px #005eff;
+      transition: background-color 0.3s;
+    }
+
+    .nav-buttons a:hover {
+      background-color: #003fad;
+    }
+
+    .retour-logo {
+      text-align: center;
+      margin: 3rem 0 2rem;
+    }
+
+    .retour-logo img {
+      max-height: 80px;
+      transition: transform 0.3s;
+    }
+
+    .retour-logo img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Artisan Domotique 21</h1>
+    <p>Prestations & Contact</p>
+  </header>
+
+  <div class="nav-buttons">
+    <a href="#prestations">🛠️ Prestations</a>
+    <a href="#contact">📞 Contact</a>
+  </div>
+
+  <section id="prestations">
+    <h2>Mes services</h2>
+    <ul>
+      <li>Installation et paramétrage de la passerelle domotique et des différents modules nécessaires</li>
+      <li>Création et programmation des automatisations et notifications suivant les besoins identifiés</li>
+      <li>Fourniture et paramétrage d'un accès extérieur sécurisé (pas d'ouverture de port sur votre box internet), sans abonnement et indépendant d'un serveur cloud (tout se passe chez vous)</li>
+      <li>Création du tableau de bord entièrement personnalisé, convivial et esthétique</li>
+      <li>Accompagnement à l'utilisation</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📌 Vous avez un projet ou souhaitez en savoir plus ? Contactez-moi via ce formulaire, je vous réponds rapidement.</p>
+    <form action="https://formspree.io/f/mleyzypr" method="POST">
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" required>
+
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+    <p>📞 06 01 77 64 53<br>📧 artisan.domotique21@gmail.com</p>
+  </section>
+
+  <div class="retour-logo">
+    <a href="index.html">
+      <img src="images/logo.png" alt="Retour à l'accueil">
+    </a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Artisan Domotique 21 - Tous droits réservés</p>
+  </footer>
+</body>
+</html>
