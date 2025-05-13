@@ -182,8 +182,9 @@ section {
   cursor: pointer;
   display: inline-block;
 }
-.retour-logo {
-  text-align: center;
-  margin-top: 3rem;
+.logo-retour:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00bfff, 0 0 40px #00bfff;
 }
+
 
