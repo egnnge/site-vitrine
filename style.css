@@ -125,9 +125,11 @@ footer p {
 }
 
 .logo-brillant {
-  max-height: 100px;
-  height: auto;
-  width: auto;
+  max-height: 100px !important;
+  height: auto !important;
+  width: auto !important;
+  display: block;
+  margin: auto;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
