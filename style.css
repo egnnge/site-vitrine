@@ -194,4 +194,62 @@ section {
   margin-top: 3rem;
 }
 
+/* ---------- Page Automatisations : galerie vidéo/image ---------- */
+.wrapper { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+
+.section-title {
+  color: #66b2ff;
+  text-align: center;
+  margin: 0 0 1.2rem;
+  border-bottom: 2px solid #1a73e8;
+  padding-bottom: .4rem;
+}
+
+/* Grille responsive (évite conflit avec .galerie existante) */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+/* Carte média */
+.card {
+  background-color: #1e1e1e;
+  border-left: 4px solid #1a73e8;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,.35);
+  padding: 1rem;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 14px rgba(26,115,232,.35);
+}
+.card h3 {
+  color: #88c5ff;
+  margin: 0 0 .5rem;
+  font-size: 1.1rem;
+}
+.card .desc {
+  margin: 0 0 .9rem;
+  color: #cfd8e3;
+  font-size: .95rem;
+  line-height: 1.35rem;
+}
+
+/* Conteneur média : ratio vertical smartphone par défaut */
+.media {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+  aspect-ratio: 9 / 16;      /* tes vidéos portrait */
+}
+.media video,
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
