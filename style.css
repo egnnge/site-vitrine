@@ -194,7 +194,7 @@ section {
   margin-top: 3rem;
 }
 
-/* ---------- Page Automatisations : galerie vidéo/image ---------- */
+/* --------- Page Automatisations : galerie vidéo/image --------- */
 .wrapper { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
 
 .section-title {
@@ -205,7 +205,7 @@ section {
   padding-bottom: .4rem;
 }
 
-/* Grille responsive (évite conflit avec .galerie existante) */
+/* Grille responsive */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -221,35 +221,42 @@ section {
   padding: 1rem;
   transition: transform .2s ease, box-shadow .2s ease;
 }
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 14px rgba(26,115,232,.35);
-}
-.card h3 {
-  color: #88c5ff;
-  margin: 0 0 .5rem;
-  font-size: 1.1rem;
-}
-.card .desc {
-  margin: 0 0 .9rem;
-  color: #cfd8e3;
-  font-size: .95rem;
-  line-height: 1.35rem;
-}
+.card:hover { transform: translateY(-2px); box-shadow: 0 0 14px rgba(26,115,232,.35); }
+.card h3 { color: #88c5ff; margin: 0 0 .5rem; font-size: 1.1rem; }
+.card .desc { margin: 0 0 .9rem; color: #cfd8e3; font-size: .95rem; line-height: 1.35rem; }
 
-/* Conteneur média : ratio vertical smartphone par défaut */
+/* ---- Conteneur média : par défaut, PAS de ratio forcé ---- */
 .media {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
   background: #000;
-  aspect-ratio: 9 / 16;      /* tes vidéos portrait */
 }
+
+/* Médias responsives, sans recadrage par défaut */
 .media video,
 .media img {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;           /* conserve les proportions */
+  object-fit: contain;    /* pas de rognage par défaut */
+  max-height: 70vh;       /* évite une vidéo trop haute sur desktop */
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
+/* ---- Variantes avec ratio fixe quand tu en as besoin ---- */
+.media.ratio-16x9 { aspect-ratio: 16 / 9; }
+.media.ratio-9x16 { aspect-ratio: 9 / 16; }
+.media.square     { aspect-ratio: 1 / 1; }
 
+/* Si tu veux remplir le cadre (et accepter le recadrage) uniquement pour ces variantes */
+.media.ratio-16x9 > video,
+.media.ratio-9x16 > video,
+.media.square > video,
+.media.ratio-16x9 > img,
+.media.ratio-9x16 > img,
+.media.square > img {
+  height: 100%;
+  object-fit: cover; /* remplit le cadre défini par le ratio */
+}
