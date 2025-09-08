@@ -38,11 +38,18 @@ Outre son côté très pratique, dans certains cas elle renforce la sécurité d
       </p>
 
       <div class="media">
-        <video controls preload="metadata" playsinline
-               poster="images/automatisation_poster.jpg">
-          <source src="images/Automatisation_arrivee_domicile_720p.mp4" type="video/mp4">
-          Votre navigateur ne supporte pas la lecture vidéo.
-        </video>
+        <video controls
+       preload="metadata"
+       playsinline
+       poster="images/automatisation_poster.jpg"
+       controlsList="nodownload noplaybackrate"
+       disablePictureInPicture
+       oncontextmenu="return false;"
+       style="max-width:100%; aspect-ratio:16/9; background:#000;">
+  <source src="images/Automatisation_arrivee_domicile_720p.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la lecture vidéo.
+</video>
+
       </div>
     </article>
   </section>
