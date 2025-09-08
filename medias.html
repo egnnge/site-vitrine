@@ -5,6 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Automatisations - Connect Maison Locale</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Overrides locaux pour cette page -->
+  <style>
+    /* Empile les articles verticalement (au lieu de la grille .gallery de style.css) */
+    .articles {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: block;
+    }
+    .articles .card {
+      margin-bottom: 40px; /* espace entre articles */
+    }
+
+    /* Pair d'images : côte à côte sans déformation */
+    .media-pair {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .media-pair img {
+      display: block;
+      width: auto !important;     /* ne pas forcer la largeur */
+      height: auto !important;    /* ratio préservé même si un style global met height:100% */
+      max-width: 300px;           /* taille raisonnable */
+      max-height: 220px;          /* borne la hauteur */
+      object-fit: contain;        /* jamais étirée */
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0,0,0,.4);
+    }
+    @media (max-width: 700px) {
+      .media-pair img {
+        max-width: 46vw;
+        max-height: 32vh;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -16,7 +56,7 @@
     <p>Exemples d'automatisations utiles au quotidien</p>
     <nav>
       <ul>
-        <li><a href="index.html">Accueil</a></li>        
+        <li><a href="index.html">Accueil</a></li>
         <li><a href="infos.html">Prestations</a></li>
         <li><a href="tableaux.html">Tableaux de bord</a></li>
         <li><a href="automatisation.html">Automatisations</a></li>
@@ -25,84 +65,83 @@
     </nav>
   </header>
 
- <main class="wrapper">
- <h2 class="section-title">🎬 Automatisations en vidéo</h2>
+  <main class="wrapper">
+    <h2 class="section-title">🎬 Automatisations en vidéo</h2>
 
-<section class="gallery">
-  <article class="card">
-    <h2 class="section-title">Arrivée au domicile</h2>
-    <p style="max-width:900px; margin:auto; text-align:justify;">
-      Cette automatisation déclenche, quelques secondes avant votre retour à la maison,
-      l’ouverture du portail, du garage et de la serrure de la porte d’entrée, tout en désactivant
-      automatiquement le système de sécurité du logement.
-      Elle peut être activée directement depuis l’écran multimédia du véhicule (CarPlay / Android Auto)
-      ou par une simple commande vocale sur iPhone.
-      Outre son côté très pratique, dans certains cas elle renforce la sécurité des passagers en évitant
-      un arrêt prolongé sur la chaussée : le portail s’ouvre à temps pour permettre l’entrée immédiate
-      du véhicule dans la propriété.
-    </p>
+    <!-- Remplace .gallery (grid) par .articles (pile verticale) -->
+    <section class="articles">
+      <article class="card">
+        <h2 class="section-title">Arrivée au domicile</h2>
+        <p style="max-width:900px; margin:auto; text-align:justify;">
+          Cette automatisation déclenche, quelques secondes avant votre retour à la maison,
+          l’ouverture du portail, du garage et de la serrure de la porte d’entrée, tout en désactivant
+          automatiquement le système de sécurité du logement.
+          Elle peut être activée directement depuis l’écran multimédia du véhicule (CarPlay / Android Auto)
+          ou par une simple commande vocale sur iPhone.
+          Outre son côté très pratique, dans certains cas elle renforce la sécurité des passagers en évitant
+          un arrêt prolongé sur la chaussée : le portail s’ouvre à temps pour permettre l’entrée immédiate
+          du véhicule dans la propriété.
+        </p>
 
-    <div class="media">
-      <video controls
-             preload="metadata"
-             playsinline
-             poster="images/automatisation_poster.jpg"
-             controlsList="nodownload noplaybackrate"
-             disablePictureInPicture
-             oncontextmenu="return false;"
-             style="max-width:100%; aspect-ratio:16/9; background:#000;">
-        <source src="images/Automatisation_arrivee_domicile_720p.mp4" type="video/mp4">
-        Votre navigateur ne supporte pas la lecture vidéo.
-      </video>
-    </div>
-  </article>
+        <div class="media">
+          <video controls
+                 preload="metadata"
+                 playsinline
+                 poster="images/automatisation_poster.jpg"
+                 controlsList="nodownload noplaybackrate"
+                 disablePictureInPicture
+                 oncontextmenu="return false;"
+                 style="max-width:100%; aspect-ratio:16/9; background:#000;">
+            <source src="images/Automatisation_arrivee_domicile_720p.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture vidéo.
+          </video>
+        </div>
+      </article>
 
-  <article class="card">
-    <h2 class="section-title">Intégration d'une sonnette connectée et d'une caméra solaire au système de sécurité</h2>
-    <p style="max-width:900px; margin:auto; text-align:justify;">
-      L’installation d’une sonnette connectée à la porte d’entrée renforce également sa protection.
-      Intégrée au système domotique, elle permet d’exploiter son détecteur de mouvement,
-      directement relié au système d’alarme. Ainsi, la porte bénéficie d’une vidéosurveillance
-      (avec enregistrement possible) active la nuit ou lorsque l’alarme est enclenchée,
-      selon les besoins définis par l’utilisateur.
-      Le même scénario peut s’appliquer à une caméra classique, qu’elle soit filaire
-      ou à énergie solaire sur batterie. Dans ce dernier cas, l’installation est
-      considérablement simplifiée et rend la solution accessible à tout logement.
-    </p>
+      <article class="card">
+        <h2 class="section-title">Intégration d'une sonnette connectée et d'une caméra solaire au système de sécurité</h2>
+        <p style="max-width:900px; margin:auto; text-align:justify;">
+          L’installation d’une sonnette connectée à la porte d’entrée renforce également sa protection.
+          Intégrée au système domotique, elle permet d’exploiter son détecteur de mouvement,
+          directement relié au système d’alarme. Ainsi, la porte bénéficie d’une vidéosurveillance
+          (avec enregistrement possible) active la nuit ou lorsque l’alarme est enclenchée,
+          selon les besoins définis par l’utilisateur.
+          Le même scénario peut s’appliquer à une caméra classique, qu’elle soit filaire
+          ou à énergie solaire sur batterie. Dans ce dernier cas, l’installation est
+          considérablement simplifiée et rend la solution accessible à tout logement.
+        </p>
 
-    <div class="media-pair">
-      <img src="images/doorbell.jpg" alt="Sonnette connectée">
-      <img src="images/camerasolaire.jpg" alt="Caméra solaire">
-    </div>
-  </article>
+        <div class="media-pair">
+          <img src="images/doorbell.jpg" alt="Sonnette connectée">
+          <img src="images/camerasolaire.jpg" alt="Caméra solaire">
+        </div>
+      </article>
 
-  <article class="card">
-    <h2 class="section-title">Avantages du mini-PC comme passerelle domotique</h2>
-    <p style="max-width:900px; margin:auto; text-align:justify;">
-      Connect Maison Locale s’appuie sur un mini-PC comme passerelle domotique, et non sur une box propriétaire classique.
-      Ce choix offre à l’utilisateur toute la puissance et la capacité d’évolution de ces machines, garantissant
-      une solution fiable et pérenne. L’accès au serveur domotique se fait directement depuis le domicile,
-      sans dépendance à des serveurs tiers susceptibles de tomber en panne ou de disparaître en cas de fermeture
-      de l’éditeur. De plus, Connect Maison Locale met en place un accès distant sécurisé,
-      sans nécessiter d’ouverture de port sur la box internet.
-    </p>
+      <article class="card">
+        <h2 class="section-title">Avantages du mini-PC comme passerelle domotique</h2>
+        <p style="max-width:900px; margin:auto; text-align:justify;">
+          Connect Maison Locale s’appuie sur un mini-PC comme passerelle domotique, et non sur une box propriétaire classique.
+          Ce choix offre à l’utilisateur toute la puissance et la capacité d’évolution de ces machines, garantissant
+          une solution fiable et pérenne. L’accès au serveur domotique se fait directement depuis le domicile,
+          sans dépendance à des serveurs tiers susceptibles de tomber en panne ou de disparaître en cas de fermeture
+          de l’éditeur. De plus, Connect Maison Locale met en place un accès distant sécurisé,
+          sans nécessiter d’ouverture de port sur la box internet.
+        </p>
 
-    <div style="display:flex; justify-content:center; margin-top:20px;">
-      <img src="images/minipc.jpg" alt="Mini-PC passerelle domotique"
-           style="max-width:320px; height:auto; border-radius:12px; box-shadow:0 0 8px rgba(0,0,0,0.4);">
-    </div>
-  </article>
-</section>
-</main>
-  </section>
-</main>
-</footer>
-<div class="retour-logo">
-  <a href="index.html">
-    <img src="images/logo.png" alt="Retour à l'accueil" class="logo-retour">
-  </a>
-  <p style="margin-top: 0.5rem; color: #888;">Retour à l’accueil</p>
-</div>
+        <div style="display:flex; justify-content:center; margin-top:20px;">
+          <img src="images/minipc.jpg" alt="Mini-PC passerelle domotique"
+               style="max-width:320px; height:auto; border-radius:12px; box-shadow:0 0 8px rgba(0,0,0,0.4);">
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <div class="retour-logo">
+    <a href="index.html">
+      <img src="images/logo.png" alt="Retour à l'accueil" class="logo-retour">
+    </a>
+    <p style="margin-top: 0.5rem; color: #888;">Retour à l’accueil</p>
+  </div>
 
   <footer>
     <p>&copy; 2025 Connect Maison Locale - Tous droits réservés</p>
