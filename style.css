@@ -286,3 +286,43 @@ footer p {
   font-weight: 500;
 }
 .lien-article:hover { color: #99ccff; }
+
+/* =========================
+   Sommaire (liens internes)
+========================= */
+.sommaire {
+  background-color: #1e1e1e;
+  border: 1px solid #1a73e8;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  box-shadow: 0 0 10px rgba(26,115,232,.35);
+  text-align: left;
+}
+
+.sommaire h3 {
+  margin-top: 0;
+  color: #66b2ff;
+}
+
+.sommaire ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sommaire li {
+  margin: 0.6rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.sommaire li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: #1a73e8;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
