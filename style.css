@@ -337,4 +337,15 @@ footer p {
   min-height: 100vh;
 }
 
+/* === Bloc texte translucide === */
+.glass-text {
+  background: rgba(0, 0, 0, 0.45);   /* noir semi-transparent */
+  border-radius: 18px;               /* coins arrondis */
+  padding: 1.2rem;                   /* espace interne */
+  color: #ffffff;                    /* texte blanc */
+  backdrop-filter: blur(6px);        /* flou derrière */
+  -webkit-backdrop-filter: blur(6px);/* compatibilité Safari */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
 
