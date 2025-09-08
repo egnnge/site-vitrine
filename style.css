@@ -329,3 +329,11 @@ footer p {
   margin-right: 6px; /* espace entre la puce et le texte */
   line-height: 1;
 }
+
+/* === Fond page accueil (paysage) === */
+.bg-accueil {
+  background: url("images/fond page acceuil.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
