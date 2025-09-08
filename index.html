@@ -1,109 +1,201 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Connect Maison Locale - Domotique personnalisée</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Styles spécifiques : verre dépoli + layout lisible sur fond -->
+  <style>
+    /* Bloc texte translucide (verre dépoli) */
+    .glass-text{
+      background: rgba(0,0,0,.45);
+      border: 1px solid rgba(255,255,255,.15);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-radius: 18px;
+      color:#fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,.4);
+      padding: 1.2rem;
+    }
+    /* Barre de navigation translucide, plus fine */
+    .nav-glass{
+      background: rgba(0,0,0,.35);
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-radius: 12px;
+      padding:.4rem .8rem;
+      margin-top:1rem;
+    }
+    /* Conteneur central pour éviter que le texte touche les bords */
+    .wrapper{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.2rem;
+    }
+    /* Liens sur fond sombre */
+    a, a:visited{ color:#cce0ff; }
+    a:hover{ text-decoration: underline; }
+
+    /* En-têtes harmonisés sur fond sombre */
+    h1,h2,h3{ color:#ffffff; margin: .2rem 0 .6rem; }
+
+    /* Logo retour haut */
+    .retour-haut{ text-align:center; margin: 2rem 0; }
+    .logo-retour-haut{ width: 72px; height:auto; filter: drop-shadow(0 0 8px rgba(0,0,0,.5)); }
+
+    /* Navigation */
+    nav ul{
+      display:flex; gap:.8rem; list-style:none; padding:0; margin:0;
+      flex-wrap:wrap; justify-content:center;
+    }
+    nav li a{
+      display:inline-block; padding:.45rem .8rem; border-radius:10px;
+      text-decoration:none; background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    nav li a:hover{ background: rgba(255,255,255,.12); }
+
+    /* Sections */
+    section{ margin: 1.2rem 0; }
+    ul, ol{ margin: .4rem 0 .8rem 1.2rem; }
+
+    /* Footer */
+    footer{ text-align:center; color:#ddd; background: rgba(0,0,0,.35); padding:1rem; }
+
+    /* Petits écrans : un peu plus d’air */
+    @media (max-width: 640px){
+      .wrapper{ padding: .9rem; }
+      nav ul{ gap:.5rem; }
+    }
+  </style>
 </head>
+
 <body id="top" class="bg-accueil">
-  <header>
+  <header class="wrapper glass-text">
     <a href="index.html">
-  <img class="logo-brillant" src="images/logo.png" alt="Logo Artisan Domotique 21">
-</a>
-    <h2 style="color: white;">Expert en habitat sécurisé et connecté</h2>
+      <img class="logo-brillant" src="images/logo.png" alt="Logo Connect Maison Locale" />
+    </a>
+    <h2>Expert en habitat sécurisé et connecté</h2>
     <p>Une maison connectée 100% personnalisée</p>
-    <nav>
+
+    <nav class="nav-glass" aria-label="Navigation principale">
       <ul>
         <li><a href="#accueil">Accueil</a></li>
         <li><a href="infos.html">Prestations</a></li>
         <li><a href="tableaux.html">Tableaux de bord</a></li>
         <li><a href="automatisation.html">Automatisations</a></li>
         <li><a href="medias.html">Médias</a></li>
-        <li><a href="infos.html">Contact</a></li>
+        <li><a href="infos.html#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="accueil">
-    <h2>Bienvenue</h2>
-    <p>Je vous accompagne dans la création d'une maison connectée fiable, évolutive, sécurisée et financièrement accessible, 
-      basée sur une solution domotique puissante, capable de s'adapter à votre logement prinicpal ou secondaire qu'il soit neuf ou plus ancien.</p>
-  </section>
+  <main class="wrapper">
+    <section id="accueil" class="glass-text">
+      <h2>Bienvenue</h2>
+      <p>
+        Je vous accompagne dans la création d'une maison connectée fiable, évolutive, sécurisée et financièrement accessible,
+        basée sur une solution domotique puissante, capable de s'adapter à votre logement principal ou secondaire,
+        qu'il soit neuf ou plus ancien.
+      </p>
+    </section>
 
-  <section id="presentation">
-    <h2>À propos</h2>
-    <p><strong>🔧 Domoticien secteur Nuits-Saint-Georges</strong><br>
-    Vous souhaitez protéger, moderniser et donner une plus-value à votre maison.
-    Intégrateur en habitat sécurisé et connecté, je conçois et installe des solutions domotiques de dernière génération, intuitives, hautement évolutives, sans frais caché et entièrement personnalisées.
-    <h3>🧭 Qu’est-ce que l'habitat connecté et en quoi peut-il améliorer votre quotidien ?</h3>
-    <p>Grâce aux technologies dédiées à l'habitat connecté, votre résidence principale ou secondaire peut être pilotée automatiquement via des scénarios programmés, et manuellement depuis un tableau de bord accessible sur vos appareils mobiles, chez vous comme à distance.</p>
-    <p>Dès lors vous pourrez automatiser et contrôler:</p>
-    <ul>
-      <li>vos ouvrants (volets roulants, fenêtres de toit, porte de garage, portail...)</li>
-      <li>l’éclairage intérieur et extérieur</li>
-      <li>le chauffage, la climatisation et la production d’eau chaude</li>
-      <li>la sécurité du logement (alarme, caméras, serrure, détecteurs de fumée...)</li>
-      <li>la consommation électrique, la production solaire mais aussi la consommation d'eau</li>
-      <li>vos véhicules connectés (déclencher la charge de votre voiture électrique, consulter les informations du tableau de bord...)
-      <li>l’arrosage automatique, votre système audio/vidéo, et bien plus</li>
-    </ul>
-   <p>Ainsi vous optimisez la sécurité de votre logement tout en bénéficiant d'un confort adapté à votre mode de vie.</p>
-    
-    <h3>⚙️ Mon expertise : installer et personnaliser votre solution domotique</h3>
-    <ul>
-      <li>✔ Connection de vos équipements (volets roulants, éclairage, chauffage...)</li>
-      <li>✔ Installation de votre système sécurité</li>
-      <li>✔ Intégration de vos objets connectés existants</li>
-      <li>✔ Création des <a href="automatisation.html" style="color: white;">automatisations</a> et scénarios intelligents : simulation de présence, gestion du chauffage, volets roulants qui se ferment en fin de journée, alertes sur smartphone</li>
-      <li>✔ Fabrication de votre <a href="tableaux.html" style="color: white;">tableau de bord sur-mesure</a>, accessible sur vos appareils Android, iOS ou PC</li>
+    <section id="presentation" class="glass-text">
+      <h2>À propos</h2>
+      <p>
+        <strong>🔧 Domoticien secteur Nuits-Saint-Georges</strong><br/>
+        Vous souhaitez protéger, moderniser et donner une plus-value à votre maison.
+        Intégrateur en habitat sécurisé et connecté, je conçois et installe des solutions domotiques de dernière génération,
+        intuitives, hautement évolutives, sans frais cachés et entièrement personnalisées.
+      </p>
+
+      <h3>🧭 Qu’est-ce que l'habitat connecté et en quoi peut-il améliorer votre quotidien ?</h3>
+      <p>
+        Grâce aux technologies dédiées à l'habitat connecté, votre résidence principale ou secondaire peut être pilotée automatiquement via des scénarios programmés,
+        et manuellement depuis un tableau de bord accessible sur vos appareils mobiles, chez vous comme à distance.
+      </p>
+      <p>Dès lors, vous pourrez automatiser et contrôler :</p>
+      <ul>
+        <li>vos ouvrants (volets roulants, fenêtres de toit, porte de garage, portail...)</li>
+        <li>l’éclairage intérieur et extérieur</li>
+        <li>le chauffage, la climatisation et la production d’eau chaude</li>
+        <li>la sécurité du logement (alarme, caméras, serrure, détecteurs de fumée...)</li>
+        <li>la consommation électrique, la production solaire mais aussi la consommation d'eau</li>
+        <li>vos véhicules connectés (déclencher la charge de votre voiture électrique, consulter les informations du tableau de bord...)</li>
+        <li>l’arrosage automatique, votre système audio/vidéo, et bien plus</li>
+      </ul>
+      <p>
+        Ainsi, vous optimisez la sécurité de votre logement tout en bénéficiant d'un confort adapté à votre mode de vie.
+      </p>
+
+      <h3>⚙️ Mon expertise : installer et personnaliser votre solution domotique</h3>
+      <ul>
+        <li>✔ Connexion de vos équipements (volets roulants, éclairage, chauffage...)</li>
+        <li>✔ Installation de votre système de sécurité</li>
+        <li>✔ Intégration de vos objets connectés existants</li>
+        <li>✔ Création des <a href="automatisation.html">automatisations</a> et scénarios intelligents : simulation de présence, gestion du chauffage,
+            volets roulants qui se ferment en fin de journée, alertes sur smartphone</li>
+        <li>✔ Fabrication de votre <a href="tableaux.html">tableau de bord sur-mesure</a>, accessible sur vos appareils Android, iOS ou PC</li>
       </ul>
 
-    <h3>🛖 Une maison sécurisée, écoénergétique et confortable</h3>
-    <p>Lors de vos absences, votre maison continue de vivre :</p>
-    <ul>
-      <li>• Chauffage qui s’adapte</li>
-      <li>• Volets qui s’ouvrent et se ferment automatiquement</li>
-      <li>• Éclairage qui s’active à la tombée de la nuit</li>
-      <li>• Notifications sur smartphone en cas d’évènement</li>
-    </ul>
-    <p>De l’extérieur, il devient très difficile de détecter votre absence. Vous améliorez votre bien-être tout en valorisant et protégeant proactivement votre logement, avec une solution technique bien plus développée qu'un simple kit sécurité installé par les principaux acteurs du marché.</p>
-    <p>Vous serez rassuré de pouvoir contrôler et visualiser votre habitation lorsque vous serez au travail ou en vacances, quand vous le souhaitez.</p>
+      <h3>🛖 Une maison sécurisée, écoénergétique et confortable</h3>
+      <p>Lors de vos absences, votre maison continue de “vivre” :</p>
+      <ul>
+        <li>• Chauffage qui s’adapte</li>
+        <li>• Volets qui s’ouvrent et se ferment automatiquement</li>
+        <li>• Éclairage qui s’active à la tombée de la nuit</li>
+        <li>• Notifications sur smartphone en cas d’évènement</li>
+      </ul>
+      <p>
+        De l’extérieur, il devient très difficile de détecter votre absence. Vous améliorez votre bien-être tout en valorisant et protégeant proactivement votre logement,
+        avec une solution technique bien plus développée qu'un simple kit sécurité.
+      </p>
+      <p>
+        Vous serez rassuré de pouvoir contrôler et visualiser votre habitation lorsque vous serez au travail ou en vacances, quand vous le souhaitez.
+      </p>
 
-    <h3>🪛 Une installation évolutive</h3>
-    <p>Votre système domotique est modulaire et peut évoluer à tout moment selon vos besoins futurs.</p>
+      <h3>🪛 Une installation évolutive</h3>
+      <p>Votre système domotique est modulaire et peut évoluer à tout moment selon vos besoins futurs.</p>
 
-    <h3>🪙 Quel est le coût ?</h3>
-    <p>Chaque projet est unique mais à titre indicatif, le budget d'un pack sécurité ou pack ouvrants connectés totalement évolutif (énergie, éclairage, chauffage...) 
-      est de <strong>1920 € TTC</strong>, matériel / installation compris sans aucun frais d'abonnement.</p>
+      <h3>🪙 Quel est le coût ?</h3>
+      <p>
+        Chaque projet est unique, mais à titre indicatif, le budget d'un pack sécurité ou pack ouvrants connectés totalement évolutif (énergie, éclairage, chauffage...)
+        est de <strong>1920 € TTC</strong>, matériel / installation compris, sans aucun frais d'abonnement.
+      </p>
 
-    <h3>🗭 Quelles sont les étapes ?</h3>
-    <ol>
-      <li>Premier diagnostic domotique de votre logement et écoute de vos besoins</li>
-      <li>Étude technique et devis personnalisé</li>
-      <li>Installation et configuration complète</li>
-      <li>Programmation des scénarios et automatisations</li>
-      <li>Création de l'interface</li>
-      <li>Déploiement de votre système domotique sur vos appareils mobiles et accompagnement à l'utilisation</li>
-    </ol>
+      <h3>🗭 Quelles sont les étapes ?</h3>
+      <ol>
+        <li>Premier diagnostic domotique de votre logement et écoute de vos besoins</li>
+        <li>Étude technique et devis personnalisé</li>
+        <li>Installation et configuration complète</li>
+        <li>Programmation des scénarios et automatisations</li>
+        <li>Création de l'interface</li>
+        <li>Déploiement sur vos appareils mobiles et accompagnement à l'utilisation</li>
+      </ol>
 
-    <p><strong>📍 Basé à Boncourt-le-Bois (21)</strong><br>
-          📞 06 01 77 64 53<br>
-          📧 ConnectMaisonLocale@gmail.com<br>
-          📌 Contactez moi pour un devis gratuit et découvrir les possibilités pour votre maison. Je vous ferai partager ma passion pour la discipline !</p>
-  </section>
+      <p>
+        <strong>📍 Basé à Boncourt-le-Bois (21)</strong><br/>
+        📞 06 01 77 64 53<br/>
+        📧 <a href="mailto:ConnectMaisonLocale@gmail.com">ConnectMaisonLocale@gmail.com</a><br/>
+        📌 Contactez-moi pour un devis gratuit et découvrir les possibilités pour votre maison. Je vous ferai partager ma passion pour la discipline !
+      </p>
+    </section>
 
-       <div class="retour-haut">
-  <a href="#top">
-    <img src="images/logo.png" alt="Retour en haut" class="logo-retour-haut">
-  </a>
-    <p style="margin-top: 0.5rem; color: #888;">Retour à l’accueil</p>
-</div>
+    <div class="retour-haut">
+      <a href="#top" aria-label="Retour en haut de page">
+        <img src="images/logo.png" alt="Retour en haut" class="logo-retour-haut" />
+      </a>
+      <p style="margin-top:.5rem; color:#cfcfcf;">Retour à l’accueil</p>
+    </div>
+  </main>
 
-  <footer>
-    <p>&copy; 2025 Connect Maison Locale - Tous droits réservés</p>
+  <footer class="glass-text">
+    <p>&copy; 2025 Connect Maison Locale — Tous droits réservés</p>
     <p>SIRET : • Domoticien enregistré à Boncourt-le-Bois (21)</p>
-    <p>Site web hébergé en France – Données non collectées à des fins commerciales</p>
+    <p>Site web hébergé en France — Données non collectées à des fins commerciales</p>
   </footer>
 </body>
 </html>
