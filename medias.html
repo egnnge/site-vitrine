@@ -64,14 +64,38 @@ Outre son côté très pratique, dans certains cas elle renforce la sécurité d
   et rend la solution accessible à tout logement.
 </p>
 
-<div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:20px;">
-  <img src="images/doorbell.jpg" alt="Sonnette connectée"
-       style="max-width:40%; height:auto; border-radius:12px; box-shadow:0 0 8px rgba(0,0,0,0.4);">
-  <img src="images/camerasolaire.jpg" alt="Caméra solaire"
-       style="max-width:40%; height:auto; border-radius:12px; box-shadow:0 0 8px rgba(0,0,0,0.4);">
+<style>
+  /* Pair d'images : côte à côte sans déformation */
+  .media-pair {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+  .media-pair img {
+    display: block;
+    width: auto !important;        /* ne pas forcer la largeur */
+    height: auto !important;       /* ratio préservé même si un style global met height:100% */
+    max-width: 300px;              /* réduit la taille */
+    max-height: 220px;             /* borne la hauteur pour éviter les images trop hautes */
+    object-fit: contain;           /* jamais étirée */
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0,0,0,.4);
+  }
+  @media (max-width: 700px) {
+    .media-pair img {
+      max-width: 46vw;             /* plus petit sur mobile */
+      max-height: 32vh;
+    }
+  }
+</style>
+
+<div class="media-pair">
+  <img src="images/doorbell.jpg" alt="Sonnette connectée">
+  <img src="images/camerasolaire.jpg" alt="Caméra solaire">
 </div>
-
-
      </section>
 </main>
 
