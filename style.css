@@ -260,3 +260,12 @@ section {
   height: 100%;
   object-fit: cover; /* remplit le cadre défini par le ratio */
 }
+.lien-article {
+  color: #cce0ff;          /* bleu clair */
+  text-decoration: underline;
+  font-weight: 500;        /* optionnel : un peu plus lisible */
+}
+
+.lien-article:hover {
+  color: #99ccff;          /* couleur un peu plus vive au survol */
+}
