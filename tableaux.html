@@ -1,214 +1,143 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tableaux de bord - Connect Maison Locale</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css">
+<header>
+  <a href="index.html">
+    <img src="images/logo.png" alt="Logo Artisan Domotique 21" class="logo-brillant">
+  </a>
+  <h1>Connect Maison Locale</h1>
+  <p>Exemples de tableaux de bord personnalisés</p>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="infos.html">Prestations</a></li>
+      <li><a href="automatisation.html">Automatisations</a></li>
+      <li><a href="medias.html">Médias</a></li>
+      <li><a href="infos.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- Styles spécifiques (peuvent être déplacés dans style.css) -->
-  <style>
-    /* Fond uni (pas d'image) */
-    body { background:#0a0a0f; color:#fff; }
 
-    /* Verre dépoli commun */
-    .glass-text{
-      background: rgba(0,0,0,.65);
-      border: 1px solid rgba(255,255,255,.15);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      border-radius: 18px;
-      color:#fff;
-      box-shadow: 0 4px 20px rgba(0,0,0,.4);
-      padding: 1.2rem;
-      margin-bottom: 1.2rem;
-    }
+  <section>
+ <h2 style="font-size: 1.2em;">
+  Exemples de tableaux de bord entièrement personnalisés :
+  <a href="#ouvrants" style="color: #cce0ff; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#cce0ff'">ouvrants</a>, 
+  <a href="#chauffage" style="color: #cce0ff; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#cce0ff'">chauffage et climatisation</a>, 
+  <a href="#securite" style="color: #cce0ff; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#cce0ff'">sécurité</a>, 
+  <a href="#energie" style="color: #cce0ff; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#cce0ff'">énergie</a>, 
+  <a href="#eauchaude" style="color: #cce0ff; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#cce0ff'">production d'eau chaude</a>, 
+  <a href="#eclairage" style="color: #cce0ff; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#cce0ff'">éclairage</a>, 
+  <a href="#jardin" style="color: #cce0ff; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#cce0ff'">extérieur et jardin</a>, 
+  <a href="#automobile" style="color: #cce0ff; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#cce0ff'">automobile</a>, 
+  <a href="#multimedia" style="color: #cce0ff; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#cce0ff'">multimédia</a>, 
+  <a href="#vue" style="color: #cce0ff; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#cce0ff'">vue d'ensemble</a>.
+</h2>
 
-    /* Nav translucide */
-    .nav-glass{
-      background: rgba(0,0,0,.35);
-      border: 1px solid rgba(255,255,255,.12);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      border-radius: 12px;
-      padding:.4rem .8rem;
-      margin-top:1rem;
-    }
 
-    /* Conteneur central */
-    .wrapper{ max-width:1100px; margin:0 auto; padding:1.2rem; }
-
-    /* Typo & liens */
-    h1,h2,h3{ color:#fff; margin:.2rem 0 .6rem; }
-    a, a:visited{ color:#cce0ff; }
-    a:hover{ text-decoration: underline; }
-
-    /* Navigation avec CADRE autour des liens */
-    nav ul{
-      display:flex; gap:.8rem; list-style:none; padding:0; margin:0;
-      flex-wrap:wrap; justify-content:center;
-    }
-    nav li a{
-      display:inline-block; padding:.45rem .8rem; border-radius:10px;
-      text-decoration:none;
-      background: none;
-      border: none;
-      color:#cce0ff;
-      transition: background .25s ease, color .25s ease;
-    }
-    nav li a:hover{ background: rgba(255,255,255,.12); color:#fff; }
-
-    /* Galerie */
-    .galerie{ display:flex; gap:1rem; flex-wrap:wrap; margin-top:.6rem; }
-    .galerie img{ max-width:400px; height:auto; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,.5); }
-
-    /* Retour haut & footer */
-    .retour-logo{ text-align:center; margin: 2rem 0; }
-    .logo-retour{ width:72px; height:auto; filter: drop-shadow(0 0 8px rgba(0,0,0,.5)); }
-    footer{ text-align:center; color:#ddd; background: rgba(0,0,0,.35); padding:1rem; }
-
-    @media (max-width:640px){
-      .wrapper{ padding:.9rem; }
-      nav ul{ gap:.5rem; }
-    }
-  </style>
-</head>
-
-<body id="top">
-  <header class="wrapper glass-text">
-    <a href="index.html">
-      <img src="images/logo.png" alt="Logo Artisan Domotique 21" class="logo-brillant">
-    </a>
-    <h1>Connect Maison Locale</h1>
-    <p>Exemples de tableaux de bord personnalisés</p>
-
-    <nav class="nav-glass" aria-label="Navigation principale">
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="infos.html">Prestations</a></li>
-        <li><a href="automatisation.html">Automatisations</a></li>
-        <li><a href="medias.html">Médias</a></li>
-        <li><a href="infos.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="wrapper">
-    <section class="glass-text">
-      <h2 style="font-size: 1.2em;">
-        Exemples de tableaux de bord entièrement personnalisés :
-        <a href="#ouvrants">ouvrants</a>,
-        <a href="#chauffage">chauffage et climatisation</a>,
-        <a href="#securite">sécurité</a>,
-        <a href="#energie">énergie</a>,
-        <a href="#eauchaude">production d'eau chaude</a>,
-        <a href="#eclairage">éclairage</a>,
-        <a href="#jardin">extérieur et jardin</a>,
-        <a href="#automobile">automobile</a>,
-        <a href="#multimedia">multimédia</a>,
-        <a href="#vue">vue d'ensemble</a>.
-      </h2>
-    </section>
-
-    <section class="glass-text" id="ouvrants">
+    <div class="theme" id="ouvrants">
       <h3>Ouvrants</h3>
       <p>Pilotez vos ouvrants: volets roulants, fenêtres de toit, store banne depuis votre tableau de bord installé sur votre appareil mobile.</p>
       <div class="galerie">
-        <img src="images/volets.png" alt="Volets roulants">
-        <img src="images/dashboard26.png" alt="Volets roulants">
+        <img src="images/volets.png" alt="Volets roulants" style="max-width: 400px; height: auto;">
+        <img src="images/dashboard26.png" alt="Volets roulants" style="max-width: 400px; height: auto;">
       </div>
-    </section>
+    </div>
 
-    <section class="glass-text" id="chauffage">
+    <div class="theme" id="chauffage">
       <h3>Chauffage et climatisation</h3>
       <p>Pilotez votre chauffage depuis votre tableau de bord ou par automatisation et suivez en temps réel la température et l'hygrométrie de vos pièces.</p>
       <div class="galerie">
-        <img src="images/dashboard23.png" alt="Chauffage et climatisation">
-        <img src="images/dashboard9.png" alt="Relevé températures et humidité">
+        <img src="images/dashboard23.png" alt="Chauffage et climatisation" style="max-width: 400px; height: auto;">
+        <img src="images/dashboard9.png" alt="Relevé températures et humidité" style="max-width: 400px; height: auto;">
       </div>
-    </section>
+    </div>
 
-    <section class="glass-text" id="vue">
+    <div class="theme" id="vue">
       <h3>Vue d'ensemble</h3>
       <p>Un aperçu centralisé pour surveiller l'état de votre maison en un coup d'œil.</p>
       <div class="galerie">
-        <img src="images/dashboard25.png" alt="Tableau de bord global maison">
-        <img src="images/chambre.png" alt="Tableau de bord global maison">
-        <img src="images/ludi.png" alt="Tableau de bord global maison">
+        <img src="images/dashboard25.png" alt="Tableau de bord global maison" style="max-width: 400px; height: auto;">
+        <img src="images/chambre.png" alt="Tableau de bord global maison" style="max-width: 400px; height: auto;">
+        <img src="images/ludi.png" alt="Tableau de bord global maison" style="max-width: 400px; height: auto;">
       </div>
-    </section>
+    </div>
 
-    <section class="glass-text" id="securite">
+    <div class="theme" id="securite">
       <h3>Sécurité</h3>
       <p>Contrôlez l’alarme, la serrure, les capteurs d’ouverture, les détecteurs de mouvement ou les caméras de surveillance.</p>
       <div class="galerie">
-        <img src="images/dashboard21.png" alt="Alarme">
-        <img src="images/detecteur.png" alt="Capteurs d'ouverture">
-        <img src="images/dashboard6.png" alt="Caméras de sécurité">
+        <img src="images/dashboard21.png" alt="Alarme" style="max-width: 400px; height: auto;">
+        <img src="images/detecteur.png" alt="Capteurs d'ouverture" style="max-width: 400px; height: auto;">
+        <img src="images/dashboard6.png" alt="Caméras de sécurité" style="max-width: 400px; height: auto;">
       </div>
-    </section>
+    </div>
 
-    <section class="glass-text" id="jardin">
+    <div class="theme" id="jardin">
       <h3>Jardin</h3>
-      <p>Pilotez vos portes de garage et portail, vos éclairages extérieurs. Automatisez votre arrivée à votre domicile : ouvrez portail, garage et serrure tout en désactivant l'alarme avec un seul clic.</p>
+      <p>Pilotez vos portes de garage et portail, vos éclairages extérieurs. Automatisez votre arrivée à votre domicile : ouvrez portail, garage et serrure tout en désactivant l'alarme avec un seul clic sur un bouton de votre tableau de bord ou en commande vocale.</p>
       <div class="galerie">
-        <img src="images/jardin.png" alt="Éclairage et arrosage jardin">
+        <img src="images/jardin.png" alt="Éclairage et arrosage jardin" style="max-width: 400px; height: auto;">
       </div>
-    </section>
+    </div>
 
-    <section class="glass-text" id="eclairage">
+   <div class="theme" id="eclairage">
       <h3>Éclairage</h3>
       <p>Ambiances lumineuses, éclairages programmés ou pilotage manuel.</p>
       <div class="galerie">
-        <img src="images/dashboard8.png" alt="Éclairage intelligent">
+        <img src="images/dashboard8.png" alt="Éclairage intelligent" style="max-width: 400px; height: auto;">
       </div>
-    </section>
+    </div>
 
-    <section class="glass-text" id="eauchaude">
+    <div class="theme" id="eauchaude">
       <h3>Production d'eau chaude</h3>
       <p>Contrôlez votre production d'eau chaude et suivez la consommation électrique. J'automatise votre chauffe-eau avec la production de vos panneaux solaires.</p>
       <div class="galerie">
-        <img src="images/dashboard24.png" alt="Chauffe-eau connecté">
+        <img src="images/dashboard24.png" alt="Chauffe-eau connecté" style="max-width: 400px; height: auto;">
       </div>
-    </section>
-
-    <section class="glass-text" id="energie">
-      <h3>Énergie</h3>
-      <p>Analysez votre consommation électrique et votre production solaire, puis déclenchez les automatisations au moment le plus favorable.</p>
-      <div class="galerie">
-        <img src="images/dashboard10.png" alt="Suivi énergétique complet">
-        <img src="images/dashboard13.png" alt="Suivi énergétique complet">
-      </div>
-    </section>
-
-    <section class="glass-text" id="automobile">
-      <h3>Automobiles</h3>
-      <p>Consultez les infos de vos véhicules connectés, déclenchez la charge ou le pré-conditionnement.</p>
-      <div class="galerie">
-        <img src="images/dashboard30.png" alt="Suivi véhicules">
-      </div>
-    </section>
-
-    <section class="glass-text" id="multimedia">
-      <h3>Multimédia</h3>
-      <p>Pilotez votre système audio/vidéo et lancez un film avec un petit clic.</p>
-      <div class="galerie">
-        <img src="images/dashboard12.png" alt="Contrôle système audio/vidéo">
-      </div>
-    </section>
-
-    <div class="retour-logo">
-      <a href="index.html" aria-label="Retour à l'accueil">
-        <img src="images/logo.png" alt="Retour à l'accueil" class="logo-retour">
-      </a>
-      <p style="margin-top:.5rem; color:#cfcfcf;">Retour à l’accueil</p>
     </div>
-  </main>
 
-  <footer class="glass-text">
+    <div class="theme" id="energie">
+      <h3>Énergie</h3>
+      <p>Analysez votre consommation électrique globale et votre production solaire puis déclenchez des automatisations pour consommer votre énergie solaire au moment le plus favorable.</p>
+      <div class="galerie">
+        <img src="images/dashboard10.png" alt="Suivi énergétique complet" style="max-width: 400px; height: auto;">
+        <img src="images/dashboard13.png" alt="Suivi énergétique complet" style="max-width: 400px; height: auto;">
+      </div>
+    </div>
+
+    <div class="theme" id="automobile">
+      <h3>Automobiles</h3>
+      <p>Consulter les informations de vos véhicules connectés, déclencher la charge ou le pré-conditionnement de l'habitacle.</p>
+      <div class="galerie">
+        <img src="images/dashboard30.png" alt="Suivi énergétique complet" style="max-width: 400px; height: auto;">
+    </div>
+      
+    </div>
+    <div class="theme" id="multimedia">
+      <h3>Multimédia</h3>
+      <p>Pilotez votre système audio/vidéo et lancez un film avec un petit clic sur votre tableau de bord.</p>
+      <div class="galerie">
+        <img src="images/dashboard12.png" alt="Contrôle système audio/vidéo" style="max-width: 400px; height: auto;">
+      </div>
+    </div>
+  </section>
+<div class="retour-logo">
+  <a href="index.html">
+    <img src="images/logo.png" alt="Retour à l'accueil" class="logo-retour">
+  </a>
+  <p style="margin-top: 0.5rem; color: #888;">Retour à l’accueil</p>
+</div>
+
+  <footer>
     <p>&copy; 2025 Connect Maison Locale - Tous droits réservés</p>
     <p>SIRET : • Domoticien enregistré à Boncourt-le-Bois (21)</p>
   </footer>
 </body>
 </html>
+
 
