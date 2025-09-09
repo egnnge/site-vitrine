@@ -338,7 +338,7 @@ footer p {
 }
 /* === Fond page Automatisation (paysage) === */
 .bg-automatisation {
-  background: url("images/fond3.jpg") no-repeat center center fixed;
+  background: url("images/fond4.jpg") no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
 }
