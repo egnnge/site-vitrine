@@ -1,136 +1,197 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Automatisations - Connect Maison Locale</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <link rel="stylesheet" href="style.css"/>
 
-  <header>
+  <!-- Styles complémentaires (tu peux aussi les déplacer dans style.css) -->
+  <style>
+    /* Fond paysage pour cette page */
+    .bg-automatisation{
+      background: url("images/fond3.jpg") no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+    }
+
+    /* Verre dépoli pour les blocs */
+    .glass-text{
+      background: rgba(0,0,0,.65);            /* opacité ajustée pour bonne lisibilité */
+      border: 1px solid rgba(255,255,255,.15);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-radius: 18px;
+      color:#fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,.4);
+      padding: 1.2rem;
+    }
+
+    /* Nav translucide */
+    .nav-glass{
+      background: rgba(0,0,0,.35);
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-radius: 12px;
+      padding:.4rem .8rem;
+      margin-top:1rem;
+    }
+
+    /* Conteneur central */
+    .wrapper{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.2rem;
+    }
+
+    /* Typo et liens sur fond sombre */
+    h1,h2,h3{ color:#fff; margin:.2rem 0 .6rem; }
+    a, a:visited{ color:#cce0ff; }
+    a:hover{ text-decoration: underline; }
+
+    /* Navigation */
+    nav ul{
+      display:flex; gap:.8rem; list-style:none; padding:0; margin:0;
+      flex-wrap:wrap; justify-content:center;
+    }
+    nav li a{
+      display:inline-block; padding:.45rem .8rem; border-radius:10px;
+      text-decoration:none; background: rgba(255,255,255,.06);
+      border: none; /* pas de petit cadre */
+    }
+    nav li a:hover{ background: rgba(255,255,255,.12); }
+
+    /* Listes & sections */
+    section{ margin: 1.2rem 0; }
+    ul, ol{ margin: .4rem 0 .8rem 1.2rem; }
+
+    /* Bloc retour */
+    .retour-logo{ text-align:center; margin: 2rem 0; }
+    .logo-retour{ width:72px; height:auto; filter: drop-shadow(0 0 8px rgba(0,0,0,.5)); }
+
+    /* Footer */
+    footer{ text-align:center; color:#ddd; background: rgba(0,0,0,.35); padding:1rem; }
+
+    @media (max-width: 640px){
+      .wrapper{ padding: .9rem; }
+      nav ul{ gap:.5rem; }
+    }
+  </style>
+</head>
+
+<body class="bg-automatisation" id="top">
+  <header class="wrapper glass-text">
     <a href="index.html">
-      <img src="images/logo.png" alt="Logo Artisan Domotique 21" class="logo-brillant">
+      <img src="images/logo.png" alt="Logo Connect Maison Locale" class="logo-brillant">
     </a>
     <h1>Connect Maison Locale</h1>
     <p>Exemples d'automatisations utiles au quotidien</p>
-    <nav>
+
+    <nav class="nav-glass" aria-label="Navigation principale">
       <ul>
-        <li><a href="index.html">Accueil</a></li>        
+        <li><a href="index.html">Accueil</a></li>
         <li><a href="infos.html">Prestations</a></li>
         <li><a href="tableaux.html">Tableaux de bord</a></li>
+        <li><a href="automatisation.html">Automatisations</a></li>
         <li><a href="medias.html">Médias</a></li>
-        <li><a href="infos.html">Contact</a></li>
+        <li><a href="infos.html#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="tableaux">
-    <h3><p>
-      <strong>Connect Maison Locale</strong> utilise une solution domotique ultime, compatible avec l'ensemble des protocoles de communication (z-wave, zigbee, thread, wifi, RTS, IO...) et capable d'intégrer les équipements 
-      de toutes les marques disponibles sur le marché, jusqu'aux objets connectés finaux déjà installés dans chaque logement.<p>
-<p>Une fois la maison équipée, des scénarios d'automatisation allant des plus simples (programmation horaire, éclairage automatique...) aux plus avancés (pilotage énergetique en temps réel en couplage multi-protocoles, 
-  intégration sécurité/vidéosurveillance...) peuvent être déployés avec pour objectif d'optimiser la 
-<a href="#securite" style="color: #cce0ff; text-decoration: underline;">sécurité</a>, réduire la consommation 
-<a href="#energie" style="color: #cce0ff; text-decoration: underline;">d'énergie</a> ou accroître le 
-<a href="#confort" style="color: #cce0ff; text-decoration: underline;">confort</a> et simplifier la vie au quotidien.
-</p>
- </h3>
+  <main class="wrapper">
+    <!-- Intro -->
+    <section class="glass-text">
+      <h3>Automatisations : sécurité, énergie, confort</h3>
+      <p>
+        <strong>Connect Maison Locale</strong> utilise une solution domotique ultime, compatible avec l'ensemble des protocoles
+        (Z-Wave, Zigbee, Thread, Wi-Fi, RTS, IO…) et capable d'intégrer les équipements de toutes les marques disponibles sur le marché,
+        jusqu'aux objets connectés déjà présents dans chaque logement.
+      </p>
+      <p>
+        Une fois la maison équipée, des scénarios d'automatisation allant des plus simples (programmation horaire, éclairage automatique…)
+        aux plus avancés (pilotage énergétique en temps réel en couplage multi-protocoles, intégration sécurité/vidéosurveillance…)
+        peuvent être déployés pour optimiser la
+        <a href="#securite">sécurité</a>, réduire la
+        <a href="#energie">consommation d'énergie</a>, améliorer le
+        <a href="#confort">confort</a> et simplifier la vie au quotidien.
+      </p>
+    </section>
 
-    <div class="theme" id="securite">
-      <h3>🔐 Sécurité :</h3>
+    <!-- Sécurité -->
+    <section id="securite" class="glass-text">
+      <h3>🔐 Sécurité</h3>
       <ul>
-        <li> En cas de tentative d'intrusion, déclenchement de l'ouverture des volets roulants, de la sirène et allumage de l'éclairage. Idem en cas de déclenchement d'un détecteur de fumée. Envoie d'une notification avec photo.</li>
-        <li> Programmation d'un bouton "vacances" qui coupera le chauffe eau et les appareils en veille, déclenchera un scénario d'ouverture/fermeture des volets, d'allumage/extinction de l'éclairage afin de simuler une présence.</li>
-        <li> Pour les personnes âgées ou dépendantes, envoi d'une notification avec photo dès qu'un mouvement est détecté en début de journée.</li>
-        <li> Surveillance automatique de l’état des fenêtres (fermé ou ouvert) à intervalles réguliers.</li>
-        <li> Envoi d'une notification lorsque les enfants rentrent de l'école.</li>
+        <li>En cas de tentative d'intrusion : ouverture des volets, sirène et allumage de l'éclairage. Idem en cas de détecteur de fumée. Envoi d'une notification avec photo.</li>
+        <li>Bouton “vacances” : coupe du chauffe-eau et des veilles, simulation de présence (volets + éclairages).</li>
+        <li>Pour personnes âgées/dépendantes : notification avec photo dès le premier mouvement détecté le matin.</li>
+        <li>Surveillance automatique de l’état des fenêtres (ouvert/fermé) à intervalles réguliers.</li>
+        <li>Notification lorsque les enfants rentrent de l'école.</li>
         <li>
-  <a href="medias.html#sonnette-camera" class="lien-article">
-    Lorsque l'alarme est activée et chaque nuit du coucher du soleil au lever du soleil,
-    allumer la lumière et lancer un enregistrement vidéo lorsqu'une présence est détectée devant votre porte d'entrée.
-  </a>
-</li>
-
-        <li> Discuter avec vos visiteurs à distance lorsque ceux-ci sonnent à votre porte et déclencher l'ouverture et la fermeture de la porte si besoin (livraison colis, visite amicale...).</li>
-        <li> Surveillance de l'état (ouvert ou fermé) de votre serrure connectée à intervalles réguliers. En cas de serrure non vérrouillée, envoi d'une notification sur votre smartphone et une alarme vocale sur votre assistant google home ou alexa. La fermeture automatique de la serrure est bien sûr possible.
-          Chaque membre de votre famille pourra piloter la serrure. Ainsi vos enfants en possession de smartphone n'ont plus besoin de clé même si la serrure peut toujours s'ouvrir et se fermer avec une clé traditionnelle.</li>
+          <a href="medias.html#sonnette-camera" class="lien-article">
+            Lorsque l'alarme est activée et chaque nuit du coucher du soleil au lever du soleil,
+            allumer la lumière et lancer un enregistrement vidéo lorsqu'une présence est détectée devant votre porte d'entrée.
+          </a>
+        </li>
+        <li>Parlez à vos visiteurs à distance quand ils sonnent, et ouvrez/fermez la porte si besoin (livraison, visite…).</li>
+        <li>Contrôle périodique de la serrure connectée. Si non verrouillée : notification + alerte vocale (Google Home/Alexa).
+            Fermeture auto possible. Accès multi-utilisateurs + clé traditionnelle conservée.</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="theme" id="energie">
-      <h3>⚡ Énergie :</h3>
+    <!-- Énergie -->
+    <section id="energie" class="glass-text">
+      <h3>⚡ Énergie</h3>
       <ul>
-        <li> Démarrage automatique des appareils énergivores (recharge voiture électrique, chauffe eau, climatisation, chauffage) en cas d'absence de consommation d'énergie et de production solaire suffisante et scénario inverse en cas de production solaire insuffisante et consommation d'énergie importante.</li>
-        <li> Allumer/éteindre chauffage/climatisation en cas de fenêtre ouverte depuis plus de 2 minutes et scénario inverse en cas de fermeture de fenêtre.</li>
-        <li> Couper/allumer le chauffage principal en cas d'allumage/extinction de votre insert/poêle granulés.</li>
-        <li> Mode nuit qui diminue le chauffage et coupe les appareils en veille, scénario inverse le matin.</li>
-        <li> Démarrage de votre chauffage/climatisation dès qu'un seuil de température précis au dixième de degré a été atteint.</li>
-        <li> Diminuer le chauffage automatiquement et couper les éclairages restés allumés lorsque l'alarme est activée au départ du domicile et le remettre en position confort lorsque l'alarme est désactivée au retour.</li>
-        <li> Déclenchement du lave-linge ou du lave-vaisselle si surplus solaire supérieur à 500 W pendant 15 min.</li>
-        <li> Envoi hebdomadaire d’un rapport énergie : consommation, production solaire, chauffe eau, coût estimé.</li>
-        <li> Envoyer une notification si une consommation d'eau est détectée pendant les vacances ou une alerte en cas forte de consommation détectée.</li>
+        <li>Démarrage auto des appareils énergivores (VE, chauffe-eau, clim, chauffage) si surplus solaire; arrêt en cas d’insuffisance.</li>
+        <li>Extinction chauffage/clim si une fenêtre reste ouverte &gt; 2 min, réactivation à la fermeture.</li>
+        <li>Couplage avec insert/poêle granulés pour piloter le chauffage principal.</li>
+        <li>Mode nuit : baisse chauffage et coupe des veilles; scénario inverse le matin.</li>
+        <li>Départ/arrêt chauffage/clim à des seuils précis (au 1/10e de degré).</li>
+        <li>Baisse chauffage + extinction des lumières quand l’alarme est activée au départ; retour confort au désarmement.</li>
+        <li>Déclenchement LL/LV si surplus &gt; 500 W pendant 15 min.</li>
+        <li>Rapport hebdo énergie : conso, production solaire, chauffe-eau, coût estimé.</li>
+        <li>Alerte en cas d’usage d’eau en vacances / surconsommation anormale.</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="theme" id="confort">
-      <h3>🛋️ Bien-être et confort :</h3>
+    <!-- Confort -->
+    <section id="confort" class="glass-text">
+      <h3>🛋️ Bien-être & confort</h3>
       <ul>
-        <li> Fermeture des volets roulants calée sur le coucher du soleil avec un délai ajustable programmable, ouverture calée sur le lever du soleil les jours de travail dans les mêmes conditions.</li>
-        <li> Avec un clic sur un interrupteur placé devant la porte d'entrée, ouvrer portail, porte garage, fermer votre serrure et activer l'alarme.</li>
+        <li>Volets calés sur le coucher/lever du soleil, avec délais ajustables.</li>
+        <li>Depuis un interrupteur près de l’entrée : ouvrir portail + garage, fermer la serrure, activer l’alarme.</li>
         <li>
-  <a href="medias.html#video-arrivee" style="color:#cce0ff; text-decoration:underline;">
-    Au retour au domicile, avec un clic sur l'ordinateur de bord de votre véhicule,
-    ouvrez portail, porte garage, désactivez l'alarme et ouvrez votre serrure connectée
-    quelques instants avant votre arrivée.
-  </a>
-</li>
-        <li> Reception d'une notification sur votre smartphone lorsqu'un visiteur sonne à votre porte, si du courrier est déposé/retiré dans votre boite aux lettres et sur tous les évènements qui peuvent se produire à votre domicile (énegie, alarme, chauffage, fenêtre ou porte garage restée ouverte...).</li>
-        <li> Activation automatique d'un éclairage tamisé (10 %) dans le salon ou la cuisine la nuit lorsqu’un mouvement est détecté, ou allumage du votre miroir LED dès que vous entrez dans la salle de bain.</li>
-        <li> Activer automatiquement la lumière des toilettes à faible intensité entre 22h et 7h.</li>
-        <li> Avec un clic sur un interrupteur, allumer et couper tous vos éclairages ou piloter l'ensemble de vos ouvrants.</li>
-        <li> Avec un clic sur un interrupteur, lancer un film sur votre système audio/vidéo et déclencher un éclairage atténué.</li>
-        <li> Réactivation automatique d'équipements après une coupure de courant.</li>
-        <li> Pré-chauffage de la salle de bain 30 min avant le réveil, uniquement en hiver.</li>
-        <li> Fermer automatiquement les volets lorsque le soleil frappe directement les fenêtres en été.</li>
-        <li> Fermer automatiquement les volets velux les mois d'été, si la température intérieure et extérieure dépasse la limite programmée, si les fenêtres sont fermées, si les volets sont détectés ouverts et si la météo est ensoleillée puis notifier le résultat.</li>
-        <li> Envoyer une alerte si la porte du congélateur est restée entrouverte ou si l'appareil n'est plus alimenté.</li>        
-        <li> Désactiver l’arrosage automatique si la pluie est prévue dans les 24h.</li>
-        <li> En cas de pluie, vérifier que les fenêtres velux soient bien fermées et signaler par notification les fenêtres ouvertes</li>
+          <a href="medias.html#video-arrivee" style="color:#cce0ff; text-decoration:underline;">
+            Au retour, un clic sur l’ordinateur de bord ouvre portail et garage, désactive l’alarme,
+            et déverrouille la serrure juste avant votre arrivée.
+          </a>
+        </li>
+        <li>Notifications pour sonnette, boîte aux lettres, énergie, alarme, chauffage, portes/fenêtres…</li>
+        <li>Lumière tamisée (10 %) la nuit au mouvement; miroir LED à l’entrée de la SDB.</li>
+        <li>Lumière toilettes faible intensité entre 22h et 7h.</li>
+        <li>Interrupteurs “Tout éclairages” ou “Tous ouvrants”.</li>
+        <li>Scène cinéma : lancer un film et basculer l’éclairage en mode atténué.</li>
+        <li>Réactivation auto d’équipements après coupure de courant.</li>
+        <li>Pré-chauffage SDB 30 min avant réveil (hiver).</li>
+        <li>Fermeture auto des volets quand le soleil tape en été.</li>
+        <li>Fermeture auto des Velux l’été selon température int/ext + météo; notification du résultat.</li>
+        <li>Alerte si porte du congélateur entrouverte / appareil hors tension.</li>
+        <li>Désactivation arrosage si pluie prévue &lt; 24 h; vérification des Velux en cas de pluie.</li>
       </ul>
-    </div>
+    </section>
 
     <div class="retour-logo">
-      <a href="index.html">
+      <a href="index.html" aria-label="Retour à l'accueil">
         <img src="images/logo.png" alt="Retour à l'accueil" class="logo-retour">
       </a>
-      <p style="margin-top: 0.5rem; color: #888;">Retour à l’accueil</p>
+      <p style="margin-top:.5rem; color:#cfcfcf;">Retour à l’accueil</p>
     </div>
-  </section>
+  </main>
 
-  <footer>
+  <footer class="glass-text">
     <p>© 2025 Connect Maison Locale</p>
   </footer>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
