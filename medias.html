@@ -206,8 +206,15 @@
         color: #e8f3ff;
         opacity: .9;
       }
-      @media (max-width: 480px){
-        .media-gallery img{ height: 140px; }
+
+      /* ===== Option A : sur mobile, afficher l'image en entier (plus de rognage) ===== */
+      @media (max-width: 600px){
+        .media-gallery img{
+          height: auto !important;  /* annule la hauteur fixe */
+          max-height: none;
+          object-fit: contain;       /* affiche l'image entière */
+          background: #000;          /* bandes discrètes si besoin */
+        }
       }
     </style>
 
@@ -318,6 +325,8 @@
       </figure>
     </div>
   </section>
+</article>
+
 </article>
 
 
