@@ -163,159 +163,163 @@
 </div>
 </article>
 
-      <!-- Galerie équipements domotiques (à placer après le paragraphe mini-PC) -->
-<section id="galerie-photos" class="media-gallery" aria-label="Galerie équipements domotiques">
+<!-- Galerie équipements domotiques -->
+<article class="card">
+  <h2 class="section-title">Galerie équipements domotique</h2>
 
-  <style>
-    .media-gallery{
-      max-width: 980px;
-      margin: 14px auto 0;
-      padding: 0 6px;
-    }
-    .media-gallery .grid{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 12px;
-    }
-    .media-gallery figure{
-      margin: 0;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,.15);
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .media-gallery figure:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0,0,0,.22);
-    }
-    .media-gallery a{ display:block; line-height:0; }
-    .media-gallery img{
-      width: 100%;
-      height: 160px;              /* garde des vignettes harmonisées */
-      object-fit: cover;
-      display: block;
-    }
-    .media-gallery figcaption{
-      font-size: .92rem;
-      line-height: 1.35;
-      padding: 8px 10px;
-      color: #e8f3ff;
-      opacity: .9;
-    }
-    @media (max-width: 480px){
-      .media-gallery img{ height: 140px; } /* vignettes un peu plus petites sur mobile */
-    }
-  </style>
+  <section id="galerie-photos" class="media-gallery" aria-label="Galerie équipements domotiques">
+    <style>
+      .media-gallery{
+        max-width: 980px;
+        margin: 14px auto 0;
+        padding: 0 6px;
+      }
+      .media-gallery .grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 12px;
+      }
+      .media-gallery figure{
+        margin: 0;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0,0,0,.15);
+        transition: transform .2s ease, box-shadow .2s ease;
+      }
+      .media-gallery figure:hover{
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0,0,0,.22);
+      }
+      .media-gallery a{ display:block; line-height:0; }
+      .media-gallery img{
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        display: block;
+      }
+      .media-gallery figcaption{
+        font-size: .92rem;
+        line-height: 1.35;
+        padding: 8px 10px;
+        color: #e8f3ff;
+        opacity: .9;
+      }
+      @media (max-width: 480px){
+        .media-gallery img{ height: 140px; }
+      }
+    </style>
 
-  <div class="grid">
-    <figure>
-      <a href="images/aeotec motion sensor.jpg" target="_blank" rel="noopener">
-        <img src="images/aeotec motion sensor.jpg" alt="Détecteur de mouvement Aeotec" loading="lazy" decoding="async">
-      </a>
-      <figcaption>Détecteur de mouvement Aeotec</figcaption>
-    </figure>
+    <div class="grid">
+      <figure>
+        <a href="images/aeotec motion sensor.jpg" target="_blank" rel="noopener">
+          <img src="images/aeotec motion sensor.jpg" alt="Détecteur de mouvement Aeotec" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Détecteur de mouvement Aeotec</figcaption>
+      </figure>
 
-    <figure>
-      <a href="images/affichage disuasif.png" target="_blank" rel="noopener">
-        <img src="images/affichage disuasif.png" alt="Affichage dissuasif" loading="lazy" decoding="async">
-      </a>
-      <figcaption>Affichage dissuasif</figcaption>
-    </figure>
+      <figure>
+        <a href="images/affichage disuasif.png" target="_blank" rel="noopener">
+          <img src="images/affichage disuasif.png" alt="Affichage dissuasif" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Affichage dissuasif</figcaption>
+      </figure>
 
-    <figure>
-      <a href="images/cam indoor eufy.jpg" target="_blank" rel="noopener">
-        <img src="images/cam indoor eufy.jpg" alt="Caméra intérieure Eufy" loading="lazy" decoding="async">
-      </a>
-      <figcaption>Caméra intérieure Eufy</figcaption>
-    </figure>
+      <figure>
+        <a href="images/cam indoor eufy.jpg" target="_blank" rel="noopener">
+          <img src="images/cam indoor eufy.jpg" alt="Caméra intérieure Eufy" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Caméra intérieure Eufy</figcaption>
+      </figure>
 
-    <figure>
-      <a href="images/dongle zigbee.jpg" target="_blank" rel="noopener">
-        <img src="images/dongle zigbee.jpg" alt="Dongle Zigbee" loading="lazy" decoding="async">
-      </a>
-      <figcaption>Dongle Zigbee</figcaption>
-    </figure>
+      <figure>
+        <a href="images/dongle zigbee.jpg" target="_blank" rel="noopener">
+          <img src="images/dongle zigbee.jpg" alt="Dongle Zigbee" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Dongle Zigbee</figcaption>
+      </figure>
 
-    <figure>
-      <a href="images/fibaro double contact.png" target="_blank" rel="noopener">
-        <img src="images/fibaro double contact.png" alt="Fibaro Double Contact" loading="lazy" decoding="async">
-      </a>
-      <figcaption>Fibaro Double Contact</figcaption>
-    </figure>
+      <figure>
+        <a href="images/fibaro double contact.png" target="_blank" rel="noopener">
+          <img src="images/fibaro double contact.png" alt="Fibaro Double Contact" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Fibaro Double Contact</figcaption>
+      </figure>
 
-    <figure>
-      <a href="images/fibaro motion sensor.png" target="_blank" rel="noopener">
-        <img src="images/fibaro motion sensor.png" alt="Fibaro Motion Sensor" loading="lazy" decoding="async">
-      </a>
-      <figcaption>Fibaro Motion Sensor</figcaption>
-    </figure>
+      <figure>
+        <a href="images/fibaro motion sensor.png" target="_blank" rel="noopener">
+          <img src="images/fibaro motion sensor.png" alt="Fibaro Motion Sensor" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Fibaro Motion Sensor</figcaption>
+      </figure>
 
-    <figure>
-      <a href="images/fibaro roller shutter.jpg" target="_blank" rel="noopener">
-        <img src="images/fibaro roller shutter.jpg" alt="Fibaro Roller Shutter" loading="lazy" decoding="async">
-      </a>
-      <figcaption>Fibaro Roller Shutter</figcaption>
-    </figure>
+      <figure>
+        <a href="images/fibaro roller shutter.jpg" target="_blank" rel="noopener">
+          <img src="images/fibaro roller shutter.jpg" alt="Fibaro Roller Shutter" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Fibaro Roller Shutter</figcaption>
+      </figure>
 
-    <figure>
-      <a href="images/lixee.png" target="_blank" rel="noopener">
-        <img src="images/lixee.png" alt="Lixee (TIC Linky)" loading="lazy" decoding="async">
-      </a>
-      <figcaption>Lixee (TIC Linky)</figcaption>
-    </figure>
+      <figure>
+        <a href="images/lixee.png" target="_blank" rel="noopener">
+          <img src="images/lixee.png" alt="Lixee (TIC Linky)" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Lixee (TIC Linky)</figcaption>
+      </figure>
 
-    <figure>
-      <a href="images/prise NOUS zigbee.png" target="_blank" rel="noopener">
-        <img src="images/prise NOUS zigbee.png" alt="Prise NOUS Zigbee" loading="lazy" decoding="async">
-      </a>
-      <figcaption>Prise NOUS Zigbee</figcaption>
-    </figure>
+      <figure>
+        <a href="images/prise NOUS zigbee.png" target="_blank" rel="noopener">
+          <img src="images/prise NOUS zigbee.png" alt="Prise NOUS Zigbee" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Prise NOUS Zigbee</figcaption>
+      </figure>
 
-    <figure>
-      <a href="images/prise zigbee.jpg" target="_blank" rel="noopener">
-        <img src="images/prise zigbee.jpg" alt="Prise Zigbee" loading="lazy" decoding="async">
-      </a>
-      <figcaption>Prise Zigbee</figcaption>
-    </figure>
+      <figure>
+        <a href="images/prise zigbee.jpg" target="_blank" rel="noopener">
+          <img src="images/prise zigbee.jpg" alt="Prise Zigbee" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Prise Zigbee</figcaption>
+      </figure>
 
-    <figure>
-      <a href="images/shelly contact sec.jpg" target="_blank" rel="noopener">
-        <img src="images/shelly contact sec.jpg" alt="Shelly contact sec" loading="lazy" decoding="async">
-      </a>
-      <figcaption>Shelly contact sec</figcaption>
-    </figure>
+      <figure>
+        <a href="images/shelly contact sec.jpg" target="_blank" rel="noopener">
+          <img src="images/shelly contact sec.jpg" alt="Shelly contact sec" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Shelly contact sec</figcaption>
+      </figure>
 
-    <figure>
-      <a href="images/temp zigbee.jpg" target="_blank" rel="noopener">
-        <img src="images/temp zigbee.jpg" alt="Thermomètre Zigbee" loading="lazy" decoding="async">
-      </a>
-      <figcaption>Thermomètre Zigbee</figcaption>
-    </figure>
+      <figure>
+        <a href="images/temp zigbee.jpg" target="_blank" rel="noopener">
+          <img src="images/temp zigbee.jpg" alt="Thermomètre Zigbee" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Thermomètre Zigbee</figcaption>
+      </figure>
 
-    <figure>
-      <a href="images/temp3 zigbee.jpg" target="_blank" rel="noopener">
-        <img src="images/temp3 zigbee.jpg" alt="Thermomètre Zigbee (modèle 3)" loading="lazy" decoding="async">
-      </a>
-      <figcaption>Thermomètre Zigbee (modèle 3)</figcaption>
-    </figure>
+      <figure>
+        <a href="images/temp3 zigbee.jpg" target="_blank" rel="noopener">
+          <img src="images/temp3 zigbee.jpg" alt="Thermomètre Zigbee (modèle 3)" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Thermomètre Zigbee (modèle 3)</figcaption>
+      </figure>
 
-    <figure>
-      <a href="images/zigbee IR.jpg" target="_blank" rel="noopener">
-        <img src="images/zigbee IR.jpg" alt="Émetteur IR Zigbee" loading="lazy" decoding="async">
-      </a>
-      <figcaption>Émetteur IR Zigbee</figcaption>
-    </figure>
+      <figure>
+        <a href="images/zigbee IR.jpg" target="_blank" rel="noopener">
+          <img src="images/zigbee IR.jpg" alt="Émetteur IR Zigbee" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Émetteur IR Zigbee</figcaption>
+      </figure>
 
-    <figure>
-      <a href="images/zooz.png" target="_blank" rel="noopener">
-        <img src="images/zooz.png" alt="Clé ZOOZ (Z-Wave)" loading="lazy" decoding="async">
-      </a>
-      <figcaption>Clé ZOOZ (Z-Wave)</figcaption>
-    </figure>
-  </div>
-</section>
+      <figure>
+        <a href="images/zooz.png" target="_blank" rel="noopener">
+          <img src="images/zooz.png" alt="Clé ZOOZ (Z-Wave)" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Clé Zooz z-wave)</figcaption>
+      </figure>
+    </div>
+  </section>
+</article>
+
 
 
     </section>
