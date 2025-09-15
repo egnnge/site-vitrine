@@ -250,6 +250,7 @@ footer p {
 .logo-brillant:hover {
   box-shadow: 0 0 20px #00bfff, 0 0 40px #00bfff;
   transform: scale(1.05);
+   border-radius: 18px;
 }
 
 .retour-haut { text-align: center; margin: 3rem 0 2rem; }
