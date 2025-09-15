@@ -77,25 +77,37 @@
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>📌 Vous avez un projet ou souhaitez en savoir plus ? Contactez-moi via ce formulaire, je vous réponds rapidement.</p>
-    <form action="https://formsubmit.co/ConnectMaisonLocale@gmail.com" method="POST">
-  <label for="nom">Nom :</label>
-  <input type="text" id="nom" name="nom" required>
+  <h2>Contact</h2>
+  <p>📌 Vous avez un projet ou souhaitez en savoir plus ? Contactez-moi via ce formulaire, je vous réponds rapidement.</p>
 
-  <label for="email">Email :</label>
-  <input type="email" id="email" name="email" required>
+  <form action="https://formsubmit.co/ConnectMaisonLocale@gmail.com" method="POST">
+    <!-- Champs visibles -->
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="Nom" required>
 
-  <label for="message">Message :</label>
-  <textarea id="message" name="message" required></textarea>
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="Email" required>
 
-  <!-- Paramètres Formsubmit -->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_subject" value="📩 Nouveau message depuis le site Connect Maison Locale !">
-  <input type="hidden" name="_next" value="https://egnnge.github.io/site-vitrine/merci.html">
+    <label for="message">Message :</label>
+    <textarea id="message" name="Message" required></textarea>
 
-  <button type="submit">Envoyer</button>
-</form>
+    <!-- Paramètres FormSubmit -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="📩 Nouveau message depuis le site Connect Maison Locale !">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://egnnge.github.io/site-vitrine/merci.html">
+    <input type="hidden" name="_autoresponse" value="Bonjour, merci pour votre message ! Je vous réponds rapidement. — Connect Maison Locale">
+
+    <!-- Anti-spam (honeypot) : doit rester vide -->
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+    <!-- Optionnel : forcer UTF-8 -->
+    <input type="hidden" name="_charset_" value="UTF-8">
+
+    <button type="submit">Envoyer</button>
+  </form>
+</section>
+
 
     <p>📞 06 01 77 64 53<br>📧 ConnectMaisonLocale@gmail.com</p>
   </section>
@@ -112,6 +124,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
