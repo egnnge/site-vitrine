@@ -144,15 +144,15 @@
     <section id="energie" class="glass-text">
       <h3>⚡ Énergie</h3>
       <ul>
-        <li>Démarrage automatique des appareils énergivores (VE, chauffe-eau, clim, chauffage) si surplus solaire; arrêt en cas d’insuffisance.</li>
+        <li>Démarrage automatique des appareils énergivores (VE, chauffe-eau, clim, chauffage) si un surplus solaire est détecté; arrêt en cas d’insuffisance.</li>
         <li>Extinction chauffage/climatisation si une fenêtre reste ouverte &gt; 2 min, réactivation à la fermeture.</li>
         <li>Couplage avec insert/poêle granulés pour piloter le chauffage principal.</li>
         <li>Mode nuit : baisse chauffage et coupe des appareils en veille; scénario inverse le matin.</li>
-        <li>Départ/arrêt chauffage/clim à des seuils précis (au 1/10e de degré).</li>
+        <li>Départ/arrêt chauffage/climatisation à des seuils précis (au 1/10e de degré).</li>
         <li>Baisse chauffage + extinction des lumières quand l’alarme est activée au départ; retour confort au désarmement.</li>
-        <li>Déclenchement LL/LV si surplus &gt; 500 W pendant 15 min.</li>
-        <li>Rapport hebdo énergie : consommation, production solaire, chauffe-eau, coût estimé.</li>
-        <li>Alerte en cas d’usage d’eau en vacances / surconsommation anormale.</li>
+        <li>Déclenchement de l'électroménager connecté si surplus solaire &gt; 500 W pendant 15 min.</li>
+        <li>Rapport hebdomadaire énergie : consommation, production solaire, chauffe-eau, coût estimé.</li>
+        <li>Alerte en cas de consommation d’eau pendant les vacances ou de surconsommation anormale.</li>
         <li>Eteindre les lumières du salon restées allumées si aucun mouvement n'est détecté depuis 20 minutes, si la télévision est éteinte, si le mode vacances est désactivé, de 30 minutes après le coucher du soleil jusqu'au lever du soleil.
         Puis lancer automatiquement une automatisation qui allumera un éclairage du salon à 10% pendant 3 minutes dès qu'un mouvement est détecté jusqu'au lever du soleil.</li>
       </ul>
@@ -162,8 +162,8 @@
     <section id="confort" class="glass-text">
       <h3>🛋️ Bien-être & confort</h3>
       <ul>
-        <li>Volets calés sur le coucher/lever du soleil, avec délais ajustables.</li>
-        <li>Depuis un interrupteur près de l’entrée : ouvrir portail + garage, fermer la serrure, activer l’alarme.</li>
+        <li>Activation automatique des volets calés sur le coucher/lever du soleil, avec délais ajustables.</li>
+        <li>Depuis un interrupteur près de l’entrée : ouvrir portail et porte garage, fermer la serrure, activer l’alarme.</li>
         <li>
           <a href="medias.html#video-arrivee" style="color:#cce0ff; text-decoration:underline;">
             Au retour, un clic sur l’ordinateur de bord ouvre portail et garage, désactive l’alarme,
@@ -171,16 +171,16 @@
           </a>
         </li>
         <li>Notifications pour sonnette, boîte aux lettres, énergie, alarme, chauffage, portes/fenêtres…</li>
-        <li>Lumière tamisée (10 %) la nuit au mouvement; miroir LED à l’entrée de la salle de bain.</li>
-        <li>Lumière toilettes faible intensité entre 22h et 7h.</li>
+        <li>Lumière tamisée (10 %) la nuit au mouvement; miroir LED allumé en entrant dans la salle de bain.</li>
+        <li>Allumage de l'éclairage des toilettes à faible intensité entre 22h et 7h.</li>
         <li>Interrupteurs “Tout éclairages” ou “Tous ouvrants”.</li>
         <li>Scène cinéma : lancer un film et basculer l’éclairage en mode atténué.</li>
         <li>Réactivation auto d’équipements après coupure de courant.</li>
-        <li>Pré-chauffage SDB 30 min avant réveil (hiver).</li>
-        <li>Fermeture auto des volets quand le soleil tape en été.</li>
-        <li>Fermeture auto des Velux l’été selon température int/ext + météo; notification du résultat.</li>
-        <li>Alerte si porte du congélateur entrouverte / appareil hors tension.</li>
-        <li>Désactivation arrosage si pluie prévue &lt; 24 h; vérification des Velux en cas de pluie.</li>
+        <li>Pré-chauffage de la salle de bain 30 min avant réveil l'hiver.</li>
+        <li>Fermeture automatique des volets quand le soleil tape sur les baies vitrées de la maison en été.</li>
+        <li>Fermeture automatique des velux l’été selon température intérieure et extérieure + météo; notification du résultat.</li>
+        <li>Alerte si porte du congélateur entrouverte ou si l'appareil est hors tension.</li>
+        <li>Désactivation arrosage si pluie prévue &lt; 24 h; vérification de l'état des fenêtres velux en cas de pluie.</li>
       </ul>
     </section>
 
@@ -197,6 +197,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
