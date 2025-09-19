@@ -65,143 +65,127 @@
     </nav>
   </header>
 
-  <main class="wrapper">
-    
-    <!-- Remplace .gallery (grid) par .articles (pile verticale) -->
-    <nav class="sommaire">
-  <h3>📑 Sommaire</h3>
-  <ul>
-    <li><a href="#video-arrivee" class="lien-article">Automatisation d'arrivée au domicile</a></li>
-    <li><a href="#video-seance_cine" class="lien-article">Automatisation d'une mise en route d'un système audio/vidéo</a></li>
-    <li><a href="#sonnette-camera" class="lien-article">Intégration d'une sonnette connectée et caméra solaire</a></li>
-    <li><a href="#mini-pc" class="lien-article">Passerelle domotique Mini-PC</a></li>
-    <li><a href="#galerie-photos" class="lien-article">Galerie équipements domotique</a></li>
-  </ul>
-</nav>
+<main class="wrapper">
 
-    <section class="articles">
-      <article class="card">
-        <h2 class="section-title" id="video-arrivee">Arrivée au domicile</h2>
-        <p style="max-width:900px; margin:auto; text-align:justify;">
-          Cette automatisation déclenche, quelques secondes avant votre retour à la maison,
-          l’ouverture du portail, du garage et de la serrure de la porte d’entrée, tout en désactivant
-          automatiquement le système de sécurité du logement.
-          Elle peut être activée directement depuis l’écran multimédia du véhicule (CarPlay / Android Auto)
-          ou par une simple commande vocale sur iPhone.
-          Outre son côté très pratique, dans certains cas elle renforce la sécurité des passagers en évitant
-          un arrêt prolongé sur la chaussée : le portail s’ouvre à temps pour permettre l’entrée immédiate
-          du véhicule dans la propriété.
-        </p>
+  <nav class="sommaire">
+    <h3>📑 Sommaire</h3>
+    <ul>
+      <li><a href="#video-arrivee" class="lien-article">Automatisation d'arrivée au domicile</a></li>
+      <li><a href="#video-seance_cine" class="lien-article">Automatisation d'une mise en route d'un système audio/vidéo</a></li>
+      <li><a href="#sonnette-camera" class="lien-article">Intégration d'une sonnette connectée et caméra solaire</a></li>
+      <li><a href="#mini-pc" class="lien-article">Passerelle domotique Mini-PC</a></li>
+      <li><a href="#galerie-photos" class="lien-article">Galerie équipements domotique</a></li>
+    </ul>
+  </nav>
+
+  <!-- UN SEUL conteneur articles -->
+  <section class="articles">
+
+    <!-- CARTE 1 -->
+    <article class="card">
+      <h2 class="section-title" id="video-arrivee">Arrivée au domicile</h2>
+      <div class="card-content" style="max-width:900px; margin:0 auto; text-align:justify;">
+        <p>Cette automatisation déclenche, quelques secondes avant votre retour à la maison,
+        l’ouverture du portail, du garage et de la serrure de la porte d’entrée, tout en désactivant
+        automatiquement le système de sécurité du logement. Elle peut être activée directement
+        depuis l’écran multimédia du véhicule (CarPlay / Android Auto) ou par une simple commande
+        vocale sur iPhone. Outre son côté très pratique, dans certains cas elle renforce la sécurité
+        des passagers en évitant un arrêt prolongé sur la chaussée : le portail s’ouvre à temps pour
+        permettre l’entrée immédiate du véhicule dans la propriété.</p>
 
         <div class="media">
-          <video controls
-                 preload="metadata"
-                 playsinline
+          <video controls preload="metadata" playsinline
                  poster="images/automatisation_poster.jpg"
-                 controlsList="nodownload noplaybackrate"
-                 disablePictureInPicture
+                 controlslist="nodownload noplaybackrate"
+                 disablepictureinpicture
                  oncontextmenu="return false;"
-                 style="max-width:100%; aspect-ratio:16/9; background:#000;">
+                 style="width:100%; aspect-ratio:16/9; background:#000;">
             <source src="images/Automatisation_arrivee_domicile_720p.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la lecture vidéo.
           </video>
         </div>
-      </article>
-
-     <section class="articles">
-  <article class="card">
-    <h2 class="section-title" id="video-seance-cine">Mise en route d'un système audio/vidéo</h2>
-
-    <div class="card-content" style="max-width:900px; margin:0 auto; text-align:justify;">
-      <h3>🎬 Présentation en vidéo d’une automatisation “séance cinéma”</h3>
-
-      <p>Un simple appui sur un bouton du tableau de bord suffit pour lancer toute une série d’actions :</p>
-      <p><strong>Mise en route du serveur de stockage :</strong> celui-ci démarre uniquement quand c’est nécessaire, ce qui permet d’économiser environ 300 kWh par an, soit près de 50 €.</p>
-      <p><strong>Préparation de la projection :</strong> le vidéoprojecteur descend, suivi de l’écran électrique.</p>
-      <p><strong>Activation des équipements audio/vidéo :</strong> l’automatisation place les appareils sous tension. Le fait de les couper totalement du mode veille représente environ 40 kWh d’économies par an pour une installation standard.</p>
-      <p><strong>Mise en fonctionnement automatique :</strong> projecteur, lecteur multimédia et amplificateur s’allument. L’ampli sélectionne la bonne source et règle le volume au niveau défini dans l’automatisation.</p>
-      <p>Au préalable les volets roulants se seront fermés et un éclairage tamisé diffuse une lumière douce dans la pièce.</p>
-      <p>Il ne reste plus qu’à choisir le programme à visionner !</p>
-
-      <h4>✨ L’automatisation peut aller encore plus loin :</h4>
-      <p>Au lancement du film, la lumière peut s’éteindre ou rester allumée selon vos préférences.</p>
-      <p>Une simple pause rallume l’éclairage, qui s’éteint à la reprise de la lecture.</p>
-
-      <div class="media">
-        <video
-          controls
-          preload="metadata"
-          playsinline
-          poster="images/automatisation_poster.jpg"
-          controlslist="nodownload noplaybackrate"
-          disablepictureinpicture
-          oncontextmenu="return false;"
-          style="width:100%; aspect-ratio:16/9; background:#000;">
-          <source src="images/seance_cine.mp4" type="video/mp4">
-          Votre navigateur ne supporte pas la lecture vidéo.
-        </video>
       </div>
-    </div>
-  </article>
-</section>
+    </article>
 
+    <!-- CARTE 2 -->
+    <article class="card">
+      <h2 class="section-title" id="video-seance_cine">Mise en route d'un système audio/vidéo</h2>
+      <div class="card-content" style="max-width:900px; margin:0 auto; text-align:justify;">
+        <h3>🎬 Présentation en vidéo d’une automatisation “séance cinéma”</h3>
+        <p>Un simple appui sur un bouton du tableau de bord suffit pour lancer toute une série d’actions :</p>
+        <p><strong>Mise en route du serveur de stockage :</strong> celui-ci démarre uniquement quand c’est nécessaire, ce qui permet d’économiser environ 300 kWh par an, soit près de 50 €.</p>
+        <p><strong>Préparation de la projection :</strong> le vidéoprojecteur descend, suivi de l’écran électrique.</p>
+        <p><strong>Activation des équipements audio/vidéo :</strong> l’automatisation place les appareils sous tension. Le fait de les couper totalement du mode veille représente environ 40 kWh d’économies par an pour une installation standard.</p>
+        <p><strong>Mise en fonctionnement automatique :</strong> projecteur, lecteur multimédia et amplificateur s’allument. L’ampli sélectionne la bonne source et règle le volume au niveau défini dans l’automatisation.</p>
+        <p>Au préalable les volets roulants se seront fermés et un éclairage tamisé diffuse une lumière douce dans la pièce.</p>
+        <p>Il ne reste plus qu’à choisir le programme à visionner !</p>
 
-      <article class="card">
-        <h2 class="section-title" id="sonnette-camera">
-  Intégration d'une sonnette connectée et d'une caméra solaire au système de sécurité
-</h2>
-        <p style="max-width:900px; margin:auto; text-align:justify;">
-          L’installation d’une sonnette connectée à votre porte d’entrée vous permet de communiquer avec vos visiteurs, où que vous soyez. Elle apporte également un niveau supplémentaire de protection.
-Intégrée au système domotique, son détecteur de mouvement devient un véritable élément de sécurité : il permet d’activer une vidéosurveillance ciblée de la porte, avec enregistrement possible, la nuit ou lorsque l’alarme est activée, selon les besoins définis par l’utilisateur.
+        <h4>✨ L’automatisation peut aller encore plus loin :</h4>
+        <p>Au lancement du film, la lumière peut s’éteindre ou rester allumée selon vos préférences.</p>
+        <p>Une simple pause rallume l’éclairage, qui s’éteint à la reprise de la lecture.</p>
 
-Le même principe s’applique à une caméra classique, qu’elle soit filaire ou solaire sur batterie. Dans ce dernier cas, l’installation est grandement simplifiée, rendant la solution adaptée et accessible à tout type de logement.
-        </p>
+        <div class="media">
+          <video controls preload="metadata" playsinline
+                 poster="images/automatisation_poster.jpg"
+                 controlslist="nodownload noplaybackrate"
+                 disablepictureinpicture
+                 oncontextmenu="return false;"
+                 style="width:100%; aspect-ratio:16/9; background:#000;">
+            <source src="images/seance_cine.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture vidéo.
+          </video>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARTE 3 -->
+    <article class="card">
+      <h2 class="section-title" id="sonnette-camera">Intégration d'une sonnette connectée et d'une caméra solaire au système de sécurité</h2>
+      <div class="card-content" style="max-width:900px; margin:0 auto; text-align:justify;">
+        <p>L’installation d’une sonnette connectée à votre porte d’entrée vous permet de communiquer avec vos visiteurs, où que vous soyez. Elle apporte également un niveau supplémentaire de protection.
+        Intégrée au système domotique, son détecteur de mouvement devient un véritable élément de sécurité : il permet d’activer une vidéosurveillance ciblée de la porte, avec enregistrement possible, la nuit ou lorsque l’alarme est activée, selon les besoins définis par l’utilisateur.</p>
+        <p>Le même principe s’applique à une caméra classique, qu’elle soit filaire ou solaire sur batterie. Dans ce dernier cas, l’installation est grandement simplifiée, rendant la solution adaptée et accessible à tout type de logement.</p>
 
         <div class="media-pair">
           <img src="images/doorbell.jpg" alt="Sonnette connectée">
           <img src="images/camerasolaire.jpg" alt="Caméra solaire">
         </div>
-      </article>
+      </div>
+    </article>
 
-     <article class="card">
-  <h2 class="section-title" id="mini-pc">La passerelle domotique idéale</h2>
+    <!-- CARTE 4 -->
+    <article class="card">
+      <h2 class="section-title" id="mini-pc">La passerelle domotique idéale</h2>
+      <div class="card-content" style="max-width:900px; margin:0 auto; text-align:justify;">
+        <p>Connect Maison Locale s’appuie sur un <strong>mini-PC</strong> pour piloter votre maison connectée, plutôt qu’une box propriétaire classique limitée 
+        en puissance et à la pérennité incertaine.</p>
 
-  <p style="max-width:900px; margin:auto; text-align:justify;">
-    Connect Maison Locale s’appuie sur un <strong>mini-PC</strong> pour piloter votre maison connectée, plutôt qu’une box propriétaire classique limitée 
-    en puissance et à la pérennité incertaine.
-  </p>
+        <p>Ce choix représente un <strong>investissement intelligent</strong> : pour un prix équivalent à celui d’une box du marché, un mini-PC offre des performances
+        et une évolutivité incomparables.</p>
 
-  <p style="max-width:900px; margin:0.6rem auto 0; text-align:justify;">
-    Ce choix représente un <strong>investissement intelligent</strong> : pour un prix équivalent à celui d’une box du marché, un mini-PC offre des performances
-    et une évolutivité incomparables.
-  </p>
+        <ul style="padding-left:1.2rem; line-height:1.7;">
+          <li><strong>Puissance et rapidité</strong> : processeur plus performant, mémoire vive extensible, stockage SSD idéal pour l'accès instantané au tableau de bord.</li>
+          <li><strong>Ouverture et compatibilité</strong> : prise en charge de tous les protocoles de communication actuels et futurs, contrairement aux box fermées
+            qui peuvent devenir obsolètes.</li>
+          <li><strong>Sécurité maximale et accès distant simplifié</strong> : accès direct à votre serveur, sans dépendance à des serveurs tiers susceptibles de tomber en panne ou d’être arrêtés
+            par leur éditeur. La connexion chiffrée est configurée sans ouverture de port sur la box internet.</li>
+        </ul>
 
-  <ul style="max-width:900px; margin:0.8rem auto 0; padding-left:1.2rem; line-height:1.7;">
-    <li><strong>Puissance et rapidité</strong> : processeur plus performant, mémoire vive extensible, stockage SSD idéal pour l'accès instantané au tableau de bord.</li>
-    <li><strong>Ouverture et compatibilité</strong> : prise en charge de tous les protocoles de communication actuels et futurs, contrairement aux box fermées
-      qui peuvent devenir obsolètes.</li>
-    <li><strong>Sécurité maximale et accès distant simplifié</strong> : accès direct à votre serveur, sans dépendance à des serveurs tiers susceptibles de tomber en panne ou d’être arrêtés
-      par leur éditeur. La connexion chiffrée est configurée sans ouverture de port sur la box internet.</li>
-     </ul>
+        <p>Grâce à l’installation et à la configuration assurées par <strong>Connect Maison Locale</strong>, vous bénéficiez d’un serveur domotique haute performance, sécurisé et accessible partout, offrant <strong>l’excellence de la maison connectée d’aujourd’hui</strong>.</p>
 
-  <p style="max-width:900px; margin:0.8rem auto 0; text-align:justify;">
-    Grâce à l’installation et à la configuration assurées par <strong>Connect Maison Locale</strong>, vous bénéficiez d’un serveur domotique haute performance, sécurisé et accessible partout, offrant <strong>l’excellence de la maison connectée d’aujourd’hui</strong>.
-  </p>
+        <p>À titre d’exemple : un tableau de bord très complexe se charge sur smartphone en <strong>7&nbsp;secondes avec une connexion 4G</strong> et <strong>4&nbsp;secondes en Wi-Fi</strong>.</p>
 
-  <p style="max-width:900px; margin:0.8rem auto 0; text-align:justify;">
-    À titre d’exemple : un tableau de bord très complexe se charge sur smartphone en <strong>7&nbsp;secondes avec une connexion 4G</strong> et <strong>4&nbsp;secondes en Wi-Fi</strong>.
-  </p>
+        <div style="display:flex; justify-content:center; margin-top:20px;">
+          <img src="images/minipc.jpg" alt="Mini-PC passerelle domotique"
+               style="max-width:clamp(180px, 60vw, 320px); height:auto; border-radius:12px; box-shadow:0 0 8px rgba(0,0,0,0.4);">
+        </div>
+      </div>
+    </article>
 
-  <div style="display:flex; justify-content:center; margin-top:20px;">
-  <img src="images/minipc.jpg" alt="Mini-PC passerelle domotique"
-       style="max-width:clamp(180px, 60vw, 320px); height:auto; border-radius:12px; box-shadow:0 0 8px rgba(0,0,0,0.4);">
-</div>
-</article>
-
-<!-- Galerie équipements domotiques -->
-<article class="card">
-  <h2 class="section-title" id="galerie-photos">Galerie équipements domotique</h2>
-<section class="media-gallery" aria-label="Galerie équipements domotiques">
+    <!-- GALERIE -->
+    <article class="card">
+      <h2 class="section-title" id="galerie-photos">Galerie équipements domotique</h2>
+      <section class="media-gallery" aria-label="Galerie équipements domotiques">
 
     <style>
       .media-gallery{
