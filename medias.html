@@ -390,5 +390,31 @@
     <p>&copy; 2025 Connect Maison Locale - Tous droits réservés</p>
     <p>SIRET : • Domoticien enregistré à Boncourt-le-Bois (21)</p>
   </footer>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Crée le backdrop une fois
+  const backdrop = document.createElement('div');
+  backdrop.className = 'lightbox-backdrop';
+  backdrop.innerHTML = '<img class="lightbox-image" alt="Agrandissement">';
+  document.body.appendChild(backdrop);
+
+  const imgEl = backdrop.querySelector('.lightbox-image');
+
+  // Ouvrir
+  document.querySelectorAll('.lightbox-trigger').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      imgEl.src = a.getAttribute('href');   // source HD
+      backdrop.classList.add('open');
+    });
+  });
+
+  // Fermer (clic, Échap)
+  const close = () => backdrop.classList.remove('open');
+  backdrop.addEventListener('click', close);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+});
+</script>
+
 </body>
 </html>
