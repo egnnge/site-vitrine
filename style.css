@@ -401,3 +401,22 @@ html { scroll-behavior: smooth; }
     max-width: 220px;
   }
 }
+/* Lightbox */
+.lightbox-backdrop {
+  position: fixed; inset: 0; background: rgba(0,0,0,.85);
+  display: none; align-items: center; justify-content: center;
+  z-index: 9999; padding: 24px;
+}
+.lightbox-backdrop.open { display: flex; }
+.lightbox-image {
+  max-width: 92vw; max-height: 92vh; border-radius: 10px;
+  box-shadow: 0 0 24px rgba(0,0,0,.6);
+  background: #111; object-fit: contain;
+  animation: lb-zoom .15s ease;
+}
+@keyframes lb-zoom { from { transform: scale(.96); opacity: .6; } to { transform: scale(1); opacity: 1; } }
+/* Curseur et focus */
+.lightbox-trigger { outline: none; display: inline-block; }
+.lightbox-trigger img { display:block; }
+.lightbox-backdrop { cursor: zoom-out; }
+
