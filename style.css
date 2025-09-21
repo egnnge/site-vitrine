@@ -359,39 +359,43 @@ footer p {
 html { scroll-behavior: smooth; }
 .section-title { scroll-margin-top: 90px; } /* ajuste à la hauteur du header */
 
-/* Texte + image côte à côte sous la vidéo */
-.inline-note {
+/* Bloc texte + image horizontale */
+.inline-note.horizontal {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-top: 12px;
-  padding: 10px 12px;
+  gap: 14px;
+  margin-top: 14px;
+  padding: 10px 14px;
   background: #1e1e1e;
   border-left: 4px solid #1a73e8;
   border-radius: 10px;
 }
 
-.inline-note__img {
-  width: 64px;           /* ajuste si besoin (48–96px) */
-  height: 64px;
-  object-fit: contain;   /* image entièrement visible */
-  flex: 0 0 auto;
-  filter: drop-shadow(0 0 6px rgba(0,0,0,.35));
+.inline-note.horizontal .inline-note__img {
+  width: 120px;     /* taille réduite de la photo */
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;   /* évite que l’image soit compressée */
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
 }
 
-.inline-note__text {
+.inline-note.horizontal .inline-note__text {
   margin: 0;
   color: #cfd8e3;
-  line-height: 1.35rem;
+  line-height: 1.5rem;
+  font-size: 0.95rem;
   text-align: justify;
 }
 
-/* Responsive : passe en pile si écran étroit */
-@media (max-width: 420px) {
-  .inline-note {
+/* Responsive : sur mobile, l'image passe au-dessus */
+@media (max-width: 600px) {
+  .inline-note.horizontal {
     flex-direction: column;
     text-align: center;
   }
-  .inline-note__text { text-align: left; }
+  .inline-note.horizontal .inline-note__img {
+    width: 60%;
+    max-width: 220px;
+  }
 }
-
