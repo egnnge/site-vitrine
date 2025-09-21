@@ -372,13 +372,14 @@ html { scroll-behavior: smooth; }
 }
 
 .inline-note.horizontal .inline-note__img {
-  width: 120px;     /* taille réduite de la photo */
+  width: 160px;     /* passe de 120px à 160px */
   height: auto;
   object-fit: contain;
-  flex-shrink: 0;   /* évite que l’image soit compressée */
+  flex-shrink: 0;
   border-radius: 6px;
   box-shadow: 0 0 8px rgba(0,0,0,0.4);
 }
+
 
 .inline-note.horizontal .inline-note__text {
   margin: 0;
@@ -386,6 +387,7 @@ html { scroll-behavior: smooth; }
   line-height: 1.5rem;
   font-size: 0.95rem;
   text-align: justify;
+   flex: 1;
 }
 
 /* Responsive : sur mobile, l'image passe au-dessus */
