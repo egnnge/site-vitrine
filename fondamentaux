@@ -65,3 +65,80 @@
       </ul>
     </nav>
   </header>
+<main class="articles">
+
+  <!-- Article 1 : Les fondations d’un système domotique réussi -->
+  <article class="card" id="fondations-domotique">
+    <h2>Les fondations d’un système domotique réussi</h2>
+    <p>
+      Installer un serveur domotique chez soi exige quelques fondamentaux pour garantir un système
+      <strong>fiable</strong>, <strong>durable</strong> et <strong>pertinent</strong>.
+      Voici les trois piliers que nous appliquons chez <strong>CML</strong> pour construire une maison
+      vraiment intelligente.
+    </p>
+
+    <h3>1. Choisir une plateforme ouverte, évolutive et puissante</h3>
+    <ul>
+      <li>
+        <strong>Interopérabilité réelle :</strong> prise en charge d’équipements multi-marques et multi-protocoles
+        (Zigbee, Z-Wave, Wi-Fi, Matter, Thread…), y compris l’intégration d’objets déjà présents chez vous.
+      </li>
+      <li>
+        <strong>Évolutivité pérenne :</strong> mises à jour régulières, large communauté et écosystème riche
+        pour s’adapter à vos usages d’aujourd’hui et de demain.
+      </li>
+      <li>
+        <strong>Automatisations avancées & interface claire :</strong> scénarios utiles au quotidien,
+        commandes intuitives (tablette murale, smartphone, voix).
+      </li>
+    </ul>
+    <p class="note">
+      <em>Chez CML, nous déployons une solution répondant à ces critères, afin d’offrir la meilleure expérience
+      aujourd’hui, tout en préparant sereinement les évolutions futures.</em>
+    </p>
+
+    <h3>2. Un serveur domotique robuste et évolutif</h3>
+    <p>
+      Le serveur est le cœur de votre installation : il doit être <strong>puissant</strong> pour supporter les intégrations,
+      <strong>fiable</strong> pour tourner en continu, et <strong>évolutif</strong> pour suivre vos besoins.
+    </p>
+    <ul>
+      <li>
+        <strong>Mini-PC CML :</strong> nous privilégions un mini-PC polyvalent et durable,
+        bien plus évolutif que des <em>passerelles propriétaires fermées</em> souvent limitées matériellement.
+      </li>
+      <li>
+        <strong>Longévité & maintenance :</strong> ressources confortables, sauvegardes et optimisation
+        évitent l’obsolescence prématurée.
+      </li>
+    </ul>
+
+    <h3>3. Un accès distant sécurisé, sans dépendance au cloud</h3>
+    <p>
+      Une maison connectée aboutie requiert un accès distant à la fois <strong>simple</strong> et
+      <strong>sécurisé</strong>, sans vous rendre captif de serveurs tiers.
+    </p>
+    <ul>
+      <li>
+        <strong>Accès direct chiffré :</strong> pas d’ouverture de ports sur votre box, chiffrement bout-à-bout.
+      </li>
+      <li>
+        <strong>Indépendance :</strong> fonctionnement sans abonnement et sans dépendre d’un cloud qui pourrait
+        tomber en panne… ou fermer définitivement.
+      </li>
+    </ul>
+    <p class="note">
+      <em>CML met en place un accès distant chiffré, sécurisé et illimité, pour que vous gardiez la maîtrise
+      totale de votre installation.</em>
+    </p>
+
+    <h3>Conclusion</h3>
+    <p>
+      Un système domotique réussi repose sur trois piliers : <strong>plateforme ouverte</strong>,
+      <strong>serveur robuste</strong> et <strong>accès distant sécurisé</strong>. Cette combinaison garantit
+      une maison connectée fiable, évolutive et réellement adaptée à votre quotidien.
+    </p>
+  </article>
+
+</main>
+
