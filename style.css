@@ -420,3 +420,28 @@ html { scroll-behavior: smooth; }
 .lightbox-trigger img { display:block; }
 .lightbox-backdrop { cursor: zoom-out; }
 
+/* === Fond page Fondamentaux === */
+.bg-fondamentaux {
+  background: url("images/fond%20fondamentaux.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative; /* nécessaire pour le ::before propre */
+}
+
+/* Voile sombre par-dessus l'image (améliore la lisibilité) */
+.bg-fondamentaux::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45); /* ajuste l'opacité: 0.3=léger, 0.6=sombre */
+  pointer-events: none;          /* ne bloque pas les clics */
+  z-index: 0;
+}
+
+/* S'assure que le contenu passe au-dessus du voile */
+header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+
+
