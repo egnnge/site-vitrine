@@ -433,7 +433,7 @@ html { scroll-behavior: smooth; }
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.45); /* ajuste l'opacité: 0.3=léger, 0.6=sombre */
+  background: rgba(0,0,0,0.6); /* ajuste l'opacité: 0.3=léger, 0.6=sombre */
   pointer-events: none;          /* ne bloque pas les clics */
   z-index: 0;
 }
