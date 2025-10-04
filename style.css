@@ -347,7 +347,7 @@ footer p {
 
 /* === Bloc texte translucide === */
 .glass-text {
-  background: rgba(0, 0, 0, 0.65);   /* noir semi-transparent */
+  background: rgba(0, 0, 0, 0.85);   /* noir semi-transparent */
   border-radius: 18px;               /* coins arrondis */
   padding: 1.2rem;                   /* espace interne */
   color: #ffffff;                    /* texte blanc */
