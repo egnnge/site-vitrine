@@ -293,8 +293,31 @@ C’est une solution ouverte, évolutive et durable : aujourd’hui comme dans d
   <footer>
     <p>&copy; 2025 Connect Maison Locale - Tous droits réservés</p>
   </footer>
+
+  ...
+</section> <!-- ton comparatif -->
+
+<script>
+const img = document.querySelector(".zoomable");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+img.addEventListener("click", () => {
+  lightbox.style.display = "flex";
+  lightboxImg.src = img.src;
+});
+
+lightbox.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+</script>
+
 </body>
 </html>
+
+</body>
+</html>
+
 
 
 
