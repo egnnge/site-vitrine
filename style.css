@@ -445,39 +445,42 @@ header, main, footer {
   position: relative;
   z-index: 1;
 }
-
-
 .comparatif-wrapper {
   display: flex;
   gap: 40px;
   align-items: center;
 }
 
-/* image */
+/* TEXTE à gauche */
+.grid {
+  flex: 1.4;
+  order: 1;
+}
+
+/* IMAGE à droite */
 .comparatif-image {
   flex: 1;
+  order: 2;
   text-align: center;
 }
 
 .comparatif-image img {
-  max-width: 100%;
+  max-width: 100%; /* IMPORTANT pour responsive */
   height: auto;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  border-radius: 20px;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.3),
+    0 0 25px rgba(80,200,120,0.15);
 }
 
-/* comparatif texte */
-.grid {
-  flex: 1.4;
-}
-
-/* responsive mobile */
+/* Mobile */
 @media (max-width: 900px) {
   .comparatif-wrapper {
     flex-direction: column;
   }
 
+  .grid,
   .comparatif-image {
-    margin-bottom: 20px;
+    order: unset;
   }
 }
