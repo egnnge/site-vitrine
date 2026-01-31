@@ -2,10 +2,21 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Responsive mobile propre -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO de base -->
   <title>Prestations et Contact - Connect Maison Locale</title>
+  <meta name="description" content="Installation domotique locale, sécurisée et évolutive en Côte-d'Or. Serveur Home Assistant, sans cloud ni abonnement. Connect Maison Locale.">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Amélioration rendu mobile -->
+  <meta name="format-detection" content="telephone=no">
 </head>
+
 <body>
   <header>
     <a href="index.html">
@@ -297,26 +308,34 @@ C’est une solution ouverte, évolutive et durable : aujourd’hui comme dans d
   ...
 </section> <!-- ton comparatif -->
 
-<script>
 const img = document.querySelector(".zoomable");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
-img.addEventListener("click", () => {
-  lightbox.style.display = "flex";
-  lightboxImg.src = img.src;
-});
+if (img) {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
 
-lightbox.addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
-</script>
+    // bloque le scroll arrière-plan
+    document.body.style.overflow = "hidden";
+  });
+
+  lightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
+
+    // réactive le scroll
+    document.body.style.overflow = "auto";
+  });
+}
+
 
 </body>
 </html>
 
 </body>
 </html>
+
 
 
 
